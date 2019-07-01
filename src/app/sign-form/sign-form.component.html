@@ -1,0 +1,22 @@
+
+<div class="sign-container">
+    <div [ngClass]="{'slide-up' : slide_up}" class="signin">        
+        <h2 (click)="slide_up = false" class="form-title"><span>ou</span>Entrar</h2>
+        <div class="form-holder">
+            <input type="email" class="input" placeholder="Email" />
+            <input type="password" class="input" placeholder="Senha" />
+        </div>
+        <a href="/panel"><button class="submit-btn">Entrar</button></a>
+    </div>
+    <div [ngClass]="{'slide-up' : !slide_up}" class="signup">
+            <div class="center">
+        <h2 (click)="slide_up = true" class="form-title"><span>ou</span>Registrar</h2>
+        <div class="form-holder">
+            <input type="text" class="input" placeholder="Nome" />
+            <input type="email" class="input" placeholder="Email" />
+            <input type="password" class="input" placeholder="Senha" />
+        </div>
+        <a href="/panel"><button class="submit-btn">Registrar</button></a>
+    </div>
+    </div>      
+</div>	

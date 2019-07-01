@@ -1,0 +1,29 @@
+<div class="subject-container">
+    <div class="header-wrapper">
+        <img class="icon" src="assets/img/subject-icon.png" />
+        <div class="info">
+            <h2>Nome do assunto</h2>
+            <p>10 exercícios</p>
+            <button *ngIf="!list_exercises" (click)="list_exercises = true" ><span>Exibir exercícios</span></button>
+            <button *ngIf="list_exercises" (click)="list_exercises = false" ><span>Esconder exercícios</span></button>
+        </div>
+        <div class="progress-block">
+            <span class="label">60<span class="smaller">%</span></span>
+            <span class="progress"></span>
+        </div>
+    </div>
+    <div *ngIf="list_exercises" class="exercises-wrapper">
+        <ul>
+            <li>Exercício 1</li>
+            <li>Exercício 2</li>
+            <li>Exercício 3</li>
+            <li>Exercício 4</li>
+            <li>Exercício 5</li>
+            <li>Exercício 6</li>
+            <li>Exercício 7</li>
+            <li>Exercício 8</li>
+            <li>Exercício 9</li>
+            <li>Exercício 10</li>
+        </ul>
+    </div>
+</div>
