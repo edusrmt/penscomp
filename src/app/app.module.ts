@@ -11,6 +11,8 @@ import { PanelComponent } from './panel/panel.component';
 import { MenuComponent } from './menu/menu.component';
 import { SubjectComponent } from './subject/subject.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { AdaptativeComponent } from './adaptative/adaptative.component';
+import { TestAlertComponent } from './test-alert/test-alert.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -30,7 +32,9 @@ const appRoutes: Routes = [
     PanelComponent,
     MenuComponent,
     SubjectComponent,
-    TasksComponent
+    TasksComponent,
+    AdaptativeComponent,
+    TestAlertComponent
   ],
   imports: [
     RouterModule.forRoot(

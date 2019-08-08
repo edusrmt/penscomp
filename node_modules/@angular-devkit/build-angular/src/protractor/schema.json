@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Protractor Target",
   "description": "Protractor target options for Build Facade.",
   "type": "object",
@@ -40,8 +41,7 @@
     },
     "host": {
       "type": "string",
-      "description": "Host to listen on.",
-      "default": "localhost"
+      "description": "Host to listen on."
     },
     "baseUrl": {
       "type": "string",
