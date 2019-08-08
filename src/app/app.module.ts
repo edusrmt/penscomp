@@ -10,10 +10,12 @@ import { SignFormComponent } from './sign-form/sign-form.component';
 import { PanelComponent } from './panel/panel.component';
 import { MenuComponent } from './menu/menu.component';
 import { SubjectComponent } from './subject/subject.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'panel', component: PanelComponent},
+    { path: 'tasks', component: TasksComponent},  
     { path: '',
       redirectTo: '/home',
       pathMatch: 'full'
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     SignFormComponent,
     PanelComponent,
     MenuComponent,
-    SubjectComponent
+    SubjectComponent,
+    TasksComponent
   ],
   imports: [
     RouterModule.forRoot(

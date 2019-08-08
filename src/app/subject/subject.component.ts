@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subject.component.css']
 })
 export class SubjectComponent implements OnInit {
-    list_exercises : boolean = false;
-
     constructor() { }
 
     ngOnInit() {

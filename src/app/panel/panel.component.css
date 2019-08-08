@@ -6,15 +6,3 @@
     width: 25%;
     box-shadow: 1px 0 3px 1px #777;
 }
-
-.content {
-    position: relative;
-    width: 75%;
-    float: right;
-    height: 100vh;
-    display: flex;    
-    justify-content: center;
-    height: 100%;
-    overflow: hidden;
-    padding: 2% 0;
-}
