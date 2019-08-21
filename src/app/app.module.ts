@@ -13,11 +13,13 @@ import { SubjectComponent } from './subject/subject.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { AdaptativeComponent } from './adaptative/adaptative.component';
 import { TestAlertComponent } from './test-alert/test-alert.component';
+import { TaskViewerComponent } from './task-viewer/task-viewer.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'panel', component: PanelComponent},
     { path: 'tasks', component: TasksComponent},  
+    { path: 'viewer', component: TaskViewerComponent },
     { path: '',
       redirectTo: '/home',
       pathMatch: 'full'
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     SubjectComponent,
     TasksComponent,
     AdaptativeComponent,
-    TestAlertComponent
+    TestAlertComponent,
+    TaskViewerComponent
   ],
   imports: [
     RouterModule.forRoot(
