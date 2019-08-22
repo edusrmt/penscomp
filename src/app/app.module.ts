@@ -14,6 +14,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { AdaptativeComponent } from './adaptative/adaptative.component';
 import { TestAlertComponent } from './test-alert/test-alert.component';
 import { TaskViewerComponent } from './task-viewer/task-viewer.component';
+import { ChoiceComponent } from './choice/choice.component';
+import { InputComponent } from './input/input.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
     TasksComponent,
     AdaptativeComponent,
     TestAlertComponent,
-    TaskViewerComponent
+    TaskViewerComponent,
+    ChoiceComponent,
+    InputComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -45,7 +49,7 @@ const appRoutes: Routes = [
         { enableTracing: true }
     ),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -37,6 +37,10 @@ p {
     transition: 100ms;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {    
     color: #3c65aa;
     cursor: pointer;

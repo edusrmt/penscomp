@@ -8,6 +8,7 @@
     box-shadow: 0 0 10px grey;
     z-index: 1;
     font-family: 'Roboto', sans-serif;
+    background-color: white;
 }
 
 .icon {
@@ -22,6 +23,10 @@
     color: #385170;    
     font-weight: bold;
     height: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 h2 {    
