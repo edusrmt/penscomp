@@ -124,7 +124,7 @@ a {
 
 .signup {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -206,7 +206,7 @@ a {
 }
 
 .signup.slide-up {
-    top: 90%;
+    top: 95%;
     transition: all .3s ease;
 }
 

@@ -2,13 +2,12 @@
     height: 20vh;
     width: 60vw;
     border-radius: 10px;
-    border: 2px solid #00b8a9;
     margin: 5vh auto 0 auto;
     padding: 10px;
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 13px 20px -12px #000000A0;
     z-index: 1;
     font-family: 'Roboto', sans-serif;
-    background-color: white;
+    background-color: #022248;
 }
 
 .icon {
@@ -33,6 +32,7 @@ h2 {
     font-family: 'Viga', sans-serif;
     font-weight: 100;
     margin: 5% 0 0 0;
+    color: whitesmoke;
 }
 
 p {
@@ -51,7 +51,7 @@ button {
 	height: 40px;
 	letter-spacing: 1px;
 	margin: 10% auto;
-	padding: 4px;
+	padding: 1px;
 	position: relative;
     text-decoration: none;
 	text-transform: uppercase;
@@ -65,12 +65,13 @@ button {
 
 button span {
     align-items: center;
-	background: #fff;
+    background: #022248;
+    color: #25aae1;
 	border-radius: 40px;
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	transition: background .5s ease;
+	transition: background .3s ease-in-out;
 	width: 100%;
 }
 
