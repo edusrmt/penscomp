@@ -1,3 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Rokkitt|Viga|Roboto&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #ECECEC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HOME */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    box-shadow: 1px 0 3px 1px #777;
+}
+
+.content {
+    position: relative;
+    width: 75%;
+    float: right;
+    height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo {
+    text-transform: uppercase;
+    font: 300 4em 'Righteous', cursive;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo a {
+    display: block;    
+    color: #142d4c;
+    text-decoration: none;
+    transition: .15s linear color;
+}
+
+.logo a:hover {
+    color: #9fd3c7;
+}
+
+.logo a:hover span {
+    color: #70acb1;
+}
+
+.logo span {
+    font-weight: 600;
+    transition: .15s linear color;
+}
+
+h2 {
+    margin: 0;
+}
+
+.gradient-multiline {
+    position: relative;
+    width: 300px;
+    background-color: #ececec;
+    text-align: center;
+    line-height: 1.5em;
+    font-family: 'Rokkitt', serif;
+    overflow: hidden;
+}
+  
+.gradient-multiline span {
+    color: #fff;
+    background-color: #000;
+    padding: 0.225rem 0.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+  
+@supports (mix-blend-mode: lighten) {
+
+.gradient-multiline::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(60deg, #3629a2, #00ceff);
+    mix-blend-mode: lighten;
+}
+
+}
+
+/* SIGN-FORM */
+
 .sign-container {
     height: 100%;
     width: 100%;
@@ -237,4 +340,96 @@ a {
     color: white;
     display: inline;  
     font-size: 1em;
+}
+
+/* MENU */
+
+.menu-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #385170;
+    padding: 0 0 0 0;
+}
+
+.logo {
+    text-transform: uppercase;
+    font: 300 3em 'Righteous', cursive;
+    text-align: center;
+    padding: 30% 0 0 0;
+    margin: 0;
+    opacity: 0.9;
+    transition: 100ms;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.logo a {
+    display: block;    
+    color: #9fd3c7;
+    text-decoration: none;
+    transition: .15s linear color;
+}
+
+.logo a span {
+    color: #70acb1;
+    font-weight: 600;
+    transition: .15s linear color;
+}
+
+.nav {
+    position: relative;
+    margin: 0 15%;
+    text-align: right;
+    top: 40%;
+    transform: translateY(-65%);
+    font-weight: bold;
+    font-family: 'Viga', sans-serif;
+    padding: 0;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    position: relative;
+    margin: 10% 0;
+}
+
+.nav ul li a {
+    line-height: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: rgba(255, 255, 255, 0.35);
+    display: block;
+    transition: all ease-out 300ms;
+}
+
+.nav ul li.active a {
+    color: white;
+}
+
+.nav ul li:not(.active)::after {
+    opacity: 0.4;
+}
+
+.nav ul li:not(.active):hover a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background: black;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #3629a2, #00ceff);
 }
