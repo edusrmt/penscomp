@@ -1,0 +1,146 @@
+.header-wrapper {
+    height: 20vh;
+    width: 60vw;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5vh auto 0 auto;
+    padding: 10px;
+    box-shadow: 0 0 10px grey;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.adaptative .header-wrapper {
+    box-shadow: 0 13px 20px -12px #000000A0;
+    background-color: #022248;
+}
+
+.icon {
+    display: inline-block;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.info {
+    display: inline-block;
+    vertical-align: top;
+    color: #385170;    
+    font-weight: bold;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {    
+    font-family: 'Viga', sans-serif;
+    font-weight: 100;
+    margin: 5% 0 0 0;
+}
+
+.adaptative h2 {   
+    color: whitesmoke;
+}
+
+p {
+    
+    text-decoration: none;
+    margin: 2% 0;
+    transition: 100ms;
+}
+
+button {    
+    color: #3c65aa;
+    cursor: pointer;
+	border-radius: 40px;
+    box-sizing: border-box;
+	display: block;
+	height: 40px;
+	letter-spacing: 1px;
+	margin: 10% auto;
+	padding: 4px;
+	position: relative;
+    text-decoration: none;
+	text-transform: uppercase;
+    width: 200px;
+    font-weight: bold;
+    z-index: 2;
+    border: 0;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    background-size: 300% 100%;
+}
+
+button span {
+    align-items: center;
+	background: #fff;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: background .5s ease;
+	width: 100%;
+}
+
+button:hover span {
+    background: transparent;
+    color: #fff;
+}
+
+.adaptative button:hover span {
+    background: transparent;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+.adaptative button {    
+	padding: 1px;
+}
+
+.adaptative button span {
+    background: #022248;
+    color: #25aae1;
+}
+
+.progress-block {
+    height: 20vh;
+    width: 20vh;
+    float: right;
+    position: relative;
+    background-color: #385170;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-block .progress {
+    height: 60%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: #9fd3c7;
+}
+
+.label {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 1;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px grey;
+}
+
+.progress-block .label .smaller {
+    font-size: .45em;
+    vertical-align: super;
+}
