@@ -19,8 +19,8 @@ html, body {
 .content {
     position: relative;
     width: 75%;
-    float: right;
-    height: 100vh;
+    float: right;    
+    min-height: 100vh;
 }
 
 /* MENU */

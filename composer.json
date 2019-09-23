@@ -1,0 +1,8 @@
+{
+    "name": "ufrn/penscomp",
+    "description": "Plataforma de treinamento e avaliação de alunos em Pensamento Computacional.",
+    "type": "project",
+    "require": {
+        "kreait/firebase-php": "^4.31"
+    }
+}

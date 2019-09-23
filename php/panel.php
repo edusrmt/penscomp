@@ -19,7 +19,7 @@
                     <li class="active"><a href="./panel.php">Início</a></li>
                     <li><a href="./tasks.php">Atividades</a></li>
                     <li><a href="./panel.php">Opções</a></li>
-                    <li><a href="../index.php">Sair</a></li>
+                    <li onclick="logout();"><a>Sair</a></li>
                 </ul>
             </nav>
         </div>            
@@ -30,5 +30,13 @@
     </div>
     </section>
     <!-- PANEL -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+
+    <script src="../js/panel.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PENSCOMP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/task-viewer.css">
+</head>
+<body>
+    <header>
+        <a class="navigation" href="#">< ATIVIDADES</a>
+        <h1 class="logo">
+            <a href="/home">Pens<span>comp</span></a>            
+        </h1>
+        <a class="navigation" href="#">PULAR QUESTÃO ></a>
+    </header>
+    
+    <div class="task-container">
+        <div class="task-text">
+            Lorem ipsum dolor sit amet...
+        </div>
+        <div [ngSwitch]="task.type" class="answer-area">
+            <app-input *ngSwitchCase="'input'"></app-input>
+            <app-choice *ngSwitchCase="'choice'" [options]="task.options"></app-choice>
+        </div> 
+    </div>    
+</body>
+</html>
