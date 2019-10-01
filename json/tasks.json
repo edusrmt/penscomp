@@ -1,0 +1,91 @@
+[
+    {
+      "type": "choice",
+      "title": "Verdade",
+      "statement": "José é um grande mentiroso, mas segue regras estritas sobre os momentos em que fala a verdade e quando diz mentira. Ele fala a verdade sempre nas segundas, quartas e sextas. Nos outros dias, ele sempre mente. Um dia, ele falou “Amanhã falarei a verdade”. Que dia da semana ele disse isso?",
+      "options": [
+        { "text": "segunda" },
+        { "text": "terça" },
+        { "text": "quarta" },
+        { "text": "quinta" },
+        { "text": "sexta" },
+        { "text": "sábado" },
+        { "text": "domingo" }
+      ],
+      "rightAnswer": "5",
+      "layout": "horiz"
+    },
+    {
+      "type": "input",
+      "title": "Ferrovia",
+      "statement": "8 trens (chamados de A até H) devem passar por Aparelhos de Mudança de Via (AMV), representados na figura abaixo por X1, X2, X3... X7, e chegar nas estações, representadas na figura pelas letras de A a H. O trem A precisa ir para a estação A, o trem B para a estação B, o C para a estação C e assim por diante. Cada um dos AMV X1 a X7 é inicialmente configurado para direcionar os trens para a esquerda, conforme ilustrado na figura pela linha contínua. Sempre que um trem passa por um AMV, ele muda para outra direção.\nO diretor da ferrovia quer garantir que todos os trens acabem nas estações corretas.\n\n<img class=\"center\" src=\"assets/images/q2-ferrovia.png\">\n\nQual é a ordem correta para os trens passarem por X1?\nApresente sua resposta através de uma sequência de letras maiúsculas sem espaço entre elas indicando a ordem dos trens. Um exemplo de sequência é AHBGCFDE.",
+      "rightAnswer": "AECGBFDH"
+    },
+    {
+      "type": "input",
+      "title": "Labirinto de doces",
+      "statement": "Um robô é programado para coletar o máximo de doces possível. Ele faz isso enquanto caminha pelas células. Cada célula na grade abaixo tem 0, 1, 2 ou 3 doces.\n\n<img class=\"center\" src=\"assets/images/q3-labirinto.png\">\n\nO robô começa no canto inferior esquerdo e termina no canto superior direito. O robô só pode se mover para a direita ou para cima.\nQuantos doces o robô coletará nessa grade?",
+      "rightAnswer": "14"
+    },
+    {
+      "type": "input",
+      "title": "Compressão de imagem de ícone",
+      "statement": "Veja as seguintes imagens de pixels em preto e branco em 4x4:\n\n<img class=\"center\" src=\"assets/images/q4-imagem1.png\">\n\nIsso pode ser armazenado usando dígitos binários: “1” para pixels brancos e “0” para pixels pretos. Para uma imagem 4x4, teríamos que armazenar 16 dígitos. Porém, podemos usar uma representação menor, permitindo armazenar imagens usando menos espaço, especialmente para imagens simples.\nUm possível método de comptactação é aplicar as seguintes regras:\n1. Se todos os dígitos forem 0, o resultado será \"0\".\n2. Se todos os dígitos forem 1, o resultado será \"1\".\n3. Caso contrário, deve-se dividir a imagem ao meio, tanto na horizontal quanto na vertica, resultando em uma grade 2x2, e aplicar as mesmas regras a cada elemento da grade.\nQuando há divisão, o método de compactação é aplicado a cada quadrante a partir do canto superior esquerdo e seguindo o sentido horário. Os resultados são então combinados e rodeados por parênteses.\nA figura abaixo ilustra 3 situações. Na primeira, mais à esquerda, todos os dígitos da imagens são 0, logo a imagem será representada por apenas um 0. Na segunda, no centro, há digitos diferentes, portanto há uma divisão e as mesmas regras são aplicadas a cada quadrante. O canto superior esquerdo é presentado por 1, o direito por 0 e os dois cantos inferiores por 1. Na terceira situação, há uma divisão adicional para o canto inferior direito.\n\n<img class=\"center\" src=\"assets/images/q4-imagem2.png\">\n\nAbaixo está uma imagem 8 × 8. Se o método de compactação acima for aplicado a esta imagem, qual seria sua representação comptactada?\n\n<img class=\"center\" src=\"assets/images/q4-imagem3.png\">Apresente sua resposta sem usar espaços em branco.",
+      "rightAnswer": "(111(1(1011)11))"
+    },
+    {
+      "type": "input",
+      "title": "Lavar os uniformes",
+      "statement": "Os uniformes usados em um festival de arremesso de tomates precisam ser lavados depois para remover as manchas de tomate, mas há apenas uma máquina de lavar roupa. A máquina de lavar roupa pode lavar até três uniformes em uma carga (ao mesmo tempo).\n1. O número de horas necessárias para lavar um único uniforme é exatamente igual ao número de manchas de tomate naquele uniforme.\n2. O número de horas necessárias para lavar dois uniformes ao mesmo tempo é o mesmo que o número de manchas de tomate no uniforme mais sujo dos dois.\n3. O número de horas que leva para lavar três uniformes ao mesmo tempo é o mesmo que o número de manchas de tomate no segundo mais sujo dos três.\nA tabela a seguir mostra alguns exemplos de cargas de lavagem que levariam três horas para serem lavadas.\n\n<img class=\"center\" src=\"assets/images/q5-uniforme1.png\">\n\nQuanto tempo leva para lavar os 14 uniformes (mostrados abaixo) da maneira mais rápida?\n\n<img class=\"center\" src=\"assets/images/q5-uniforme2.png\">",
+      "rightAnswer": "14"
+    },
+    {
+      "type": "input",
+      "title": "Clube do livr",
+      "statement": "Este diagrama mostra a relação de amizade entre 7 alunos em um clube de compartilhamento de livros. Seus nomes e idades também são mostrados.\n\n<img class=\"center\" src=\"assets/images/q6-imagem1.png\">\n\nO clube tem alguns regulamentos para os membros:\n* Quando você receber um livro, leia-o (se ainda não o tiver feito), passe-o ao amigo mais novo que ainda não o leu.* Se, no entanto, todos os seus amigos tiverem lido o livro, então você deve devolvê-lo ao amigo que te entregou.\nAgora Ben leu um novo livro e quer compartilhar com seus amigos. Quem vai ler o livro por último?",
+      "rightAnswer": "KIM"
+    },
+    {
+      "type": "input",
+      "title": "Bolas",
+      "statement": "Bolas numeradas rolam em uma rampa com buracos. Por causa dos buracos, a ordem das bolas muda à medida que elas caem em buracos. Quando uma bola chega a um buraco: se houver espaço suficiente, a bola cai, caso contrário, a bola passa pelo buraco. Um pino na parte inferior de cada buraco pode ser puxado e ejeta as bolas.\nAqui está um exemplo:\n\n<img class=\"center\" src=\"assets/images/q7-bolas1.png\">\n\nDez bolas rolam por uma rampa cotendo três furos A, B e C, que possuem espaço para 3, 2 e 1 bolas, respectivamente, como ilustrado na figura abaixo.\n\n<img class=\"center\" src=\"assets/images/q7-bolas2.png\">\n\nSe os pinos forem puxados na ordem A, B, C, mas, a cada vez, somente depois que todas as bolas pararem de girar, qual será a sequência de bolas resultante?\n\nApresente sua resposta através de uma sequência de números separados por vírgula e sem espaço. Por exemplo: 1,3,6,2,4,8,5,10,9,7.",
+      "rightAnswer": "7,8,9,10,3,2,1,5,4,6"
+    },
+    {
+      "type": "input",
+      "title": "Movimentos simultâneos",
+      "statement": "Três robôs trabalham em equipe em um depósito. Quando a equipe recebe um símbolo de direção (N, S, L, O), todos os robôs se movem um quadrado nessa direção, podendo inclusive passar sobre as figuras que estejam em seus caminhos.\nDepois de ter executado uma sequência de símbolos de direção, cada robô pega o objeto (figura) sobre o qual ele se encontra. Por exemplo, no cenário abaixo, se dermos a lista de direções “NNSSL” para a equipe, todos os robôs irão para cima (norte) duas vezes, depois para baixo (sul) duas vezes e por fim para a direita (leste) uma vez. Assim, o robô A irá pegar um triângulo, o robô B um quadrado e o robô C um triângulo.\n\n<img class=\"center\" src=\"assets/images/q8-deposito1.png\">\n\nQual é a menor sequência de direções a ser enviada para que a equipe pegue um círculo, um triângulo e um quadrado?\nApresente sua resposta como uma sequência de letras N, S, L e O. Por exemplo: NNSSSLLON",
+      "rightAnswer": "LLL"
+    },
+    {
+      "type": "input",
+      "title": "Mosaico",
+      "statement": "Um mosaico é pintado com três cores: branco, azul e verde, seguindo um padrão de divisão e coloração que se repetem sucessivas vezes. Por exemplo, se o mosaico começar em branco e for dividido três vezes sucessivas usando os padrões abaixo, teríamos o seguinte resultado.\n\n<img class=\"center\" src=\"assets/images/q9-mosaico1.png\">\n\nComeçando de um quadro branco, qual o padrão de divisão das cores para alcançar o mosaico a seguir após três divisões?\n\n<img class=\"center\" src=\"assets/images/q9-mosaico2.png\">\n\n Apresente sua resposta usando o seguinte formato:* Use as letras B, V ou A para representar o branco, o verde e o azul, respectivamente.\n* Um padrão é uma sequência de 4 cores, começando com do canto superior esquerdo e continuando em sentido horário.\n* A resposta deve apresentar o padrão de divisão do branco, seguido do verde e, por fim, do azul, separados por uma vírgula.\n\nPor exemplo, seguindo a divisão da primeira figura, a resposta seria: VVAA,VAVA,AVAV",
+      "rightAnswer": "AABV,AVBB,ABVB"
+    },
+    {
+      "type": "input",
+      "title": "Bolas coloridas",
+      "statement": "Várias prateleiras inclinadas com bolas, cada uma com uma cor, foram colocadas acima de uma estante maior, onde as bolas podem cair e rolar para a direita. Em cada prateleira, há um botão que, quando pressionado, deixa uma única bola da respectiva prateleira cair (a mais à esquerda).\n\n<img class=\"center\" src=\"assets/images/bola1.png\">\n\nQue sequência de botões deve ser pressionada para que a prateleira maior tenha no final as seguintes bolas (na ordem apresentada)?\n\n<img class=\"center\" src=\"assets/images/bola2.png\">\n\nApresente sua resposta através de uma sequencia de caracteres sem separadores entre as letras. Por exemplo: \"ABBCCABA\"",
+      "rightAnswer": "BBCCBCBBCCBC"
+    },
+    {
+      "type": "input",
+      "title": "Bolas vermelhas e azuis 1",
+      "statement": "<img class=\"center\" src=\"assets/images/q11-tubo.png\" style=\"float: right\">\n\nEm um jogo de tabuleiro, um tubo cilíndrico contendo bolas azuis e vermelhas serve de guia para as ações dos jogadores. O jogo começa com no mínimo quatro bolas. A cada turno, duas bolas caem do tubo e a sequência de suas cores define a ação do jogador no tabuleiro. Se a sequência das bolas a cair for:\n* azul-vermelha, o jogador move-se uma casa à frente;\n* vermelha-azul, o jogador move-se uma casa para trás;\n* azul-azul, o jogador move-se uma casa à esquerda;* vermelha-vermelha, o jogador move-se uma casa à direita.\n\nQual o estado do tubo para que os movimentos dos jogadores ocorram na ordem: frente, direita, frente, esquerda, trás, direita?\n\nApresente sua resposta através de uma sequência de letras A e V, representando bolas azuis e vermelhas, respectivamente. Considere o início da sequência por onde as bolas caem. Assim, na sequência AAVVAVA, as duas primeiras bolas a cair são AA, depois VV e assim por diante.",
+      "rightAnswer": "AVVVAVAAVAVV"
+    },
+    {
+      "type": "input",
+      "title": "Bolas vermelhas e azuis 2",
+      "statement": "<img class=\"center\" src=\"assets/images/q11-tubo.png\" style=\"float: right\">\n\nNo jogo de tabuleiro da questão anterior, as bolas azuis e vermelhas que caem do tubo cilíndrico também definem que novas bolas devem ser inseridas no topo do tubo. Lembrando que a cada turno duas bolas caem, se a primeira bola a cair for:\n* vermelha, então uma nova bola azul é inserida no tubo;\n* azul, então três bolas são inseridas: uma vermelha, uma azul e uma vermelha, nesta ordem.\nO jogo inicia com quatro bolas no tubo e termina quando restarem menos de três bolas no tubo.\nQue estado inicial do tubo com três bolas azuis e uma vermelha faz com que o jogo tenha fim (ou seja, em algum momento fique com menos de três bolas)?Apresente sua resposta através de uma sequência de letras A e V, representando bolas azuis e vermelhas, respectivamente. Considere o início da sequência por onde as bolas caem e o final da sequência por onde elas são inseridas. Por exemplo, na sequência VVAA, as duas primeiras bolas a cair são VV, resultando em AA, mas como a primeira é vermelha, será inserida uma bola azul no final da sequência, resultando em AAA. No próximo turno, mais duas irão cair, resultando em A, mas como a primeira a cair é azul, três novas bolas serão inseridas, resultando em AVAV, e o processo se repete com esta nova sequência.",
+      "rightAnswer": "AAVA"
+    },
+    {
+      "type": "input",
+      "title": "Jogo do Palit",
+      "statement": "Neste jogo, vários palitos são enfileirados como na figura abaixo. A cada turno, um jogador retira obrigatoriamente um ou dois palitos à direita da fila. Perde quem retirar o último palito.\n\n<img class=\"center\" src=\"assets/images/q12-palito.png\">\n\nConsiderando que os jogadores irão sempre escolher a melhor opção para eles, com dois jogadores, é possível saber quem vai ganhar em função do número de palitos restantes. Por exemplo, faltando apenas um palito, obrigatoriamente o jogador da vez irá perder (é a regra). Faltando dois ou três palitos, o jogador da vez irá ganhar, pois a melhor opção para ele é retirar um palito se estiver faltando dois ou retirar dois palitos se estiver faltando três. Assim, sobra obrigatoriamente o último para o adversário.\nOu seja, sabendo quem vai ganhar o jogo quando resta 1 palito, é possível saber quem vai ganhar quando resta 2 ou 3 palitos. Sabendo quem vai ganhar em um jogo com até 3 palitos, é possível saber quem ganhará se o jogo tiver 4 palitos e assim por diante. Seguindo a mesma lógica, podemos saber quem vai perder ou ganhar com qualquer número de palitos. Responda, então.\n1. Faltando 8 palitos, o jogador da vez irá perder ou ganhar?\n2. Faltando 25 palitos, o jogador da vez irá perder ou ganhar?\n3. Faltando 3000 palitos, o jogador da vez irá perder ou ganhar?\n\nApresente sua resposta às três questões através de uma sequência de letras P (se o jogador da vez for perder) ou G (se o jogador for ganhar), sendo cada letra a resposta de uma questão.\nPor exemplo, se a resposta fosse GGP, isso indicaria que faltando 8 palitos o jogador da vez irá ganhar, faltando 25 palitos, ele ganhará também, mas faltando 3000 palitos ele perderá.",
+      "rightAnswer": "GPG"
+    }
+  
+]

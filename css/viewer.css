@@ -1,0 +1,196 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #385170;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 1px 5px black;
+}
+
+a.navigation {
+    text-decoration: none;
+    color: rgb(240, 235, 235);
+    font-variant: small-caps;
+    font-family: 'Viga', sans-serif;
+    cursor: pointer;
+}
+
+a.navigation:hover {
+    color: white;
+}
+
+.task-container {
+    background-color: white;
+    width: 90vw;
+    margin: 5vh auto;
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+    padding: 20px;
+}
+
+.task-text {
+    border-bottom: 1px solid #3629a2;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.task-phaser {
+    border-bottom: 1px solid #3629a2;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#blockly {
+    display: inline-block;
+    width: 40vw;
+    height: 600px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: blue;
+    border-radius: 12px; 
+    overflow: hidden;   
+}    
+
+#phaser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#phaser canvas {
+    width: 40vw;
+}
+
+button.highlight {    
+    color: #3c65aa;
+    cursor: pointer;
+	border-radius: 40px;
+    box-sizing: border-box;
+	display: block;
+	height: 40px;
+	letter-spacing: 1px;
+    margin: 1% auto;
+	padding: 4px;
+	position: relative;
+    text-decoration: none;
+	text-transform: uppercase;
+    width: 200px;
+    font-weight: bold;
+    z-index: 2;
+    border: 0;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    background-size: 300% 100%;
+}
+
+button.highlight span {
+    align-items: center;
+	background: #fff;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: background .5s ease;
+	width: 100%;
+}
+
+button.highlight:hover span {
+    background: transparent;
+    color: #fff;
+}
+
+button.highlight:focus {
+    outline: none;
+}
+
+.answer-area {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+a.jump {
+    float: right;
+    font-weight: bold;
+    width: 18.5%;
+    text-align: center;
+    min-width: 110px;
+    color: #002564;
+}
+
+.logo {
+    text-transform: uppercase;
+    font: 300 2em 'Righteous', cursive;
+    text-align: center;
+    margin: 0;
+    opacity: 0.9;
+    transition: 100ms;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.logo a {
+    display: block;    
+    color: #9fd3c7;
+    text-decoration: none;
+    transition: .15s linear color;
+}
+
+.logo a span {
+    color: #70acb1;
+    font-weight: 600;
+    transition: .15s linear color;
+}
+
+/* INPUT */
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    border-style: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 2px solid #4481eb;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #4481eb;
+}
+
+.submit-btn {
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    height: 40px;
+    width: 13%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+.submit-btn:hover {
+    background-position: 100% 0;    
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.submit-btn:focus {
+    outline: none;
+}

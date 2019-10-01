@@ -35,7 +35,7 @@
                     <div class="info">
                         <h2>Estudo adaptativo</h2>
                         <br>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
@@ -50,7 +50,7 @@
                     <div class="info">
                         <h2>Nome do assunto</h2>
                         <p>10 exercícios</p>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
@@ -64,7 +64,7 @@
                     <div class="info">
                         <h2>Nome do assunto</h2>
                         <p>10 exercícios</p>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
@@ -78,7 +78,7 @@
                     <div class="info">
                         <h2>Nome do assunto</h2>
                         <p>10 exercícios</p>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
@@ -92,7 +92,7 @@
                     <div class="info">
                         <h2>Nome do assunto</h2>
                         <p>10 exercícios</p>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
@@ -106,7 +106,7 @@
                     <div class="info">
                         <h2>Nome do assunto</h2>
                         <p>10 exercícios</p>
-                        <a href="/viewer"><button><span>Iniciar</span></button></a>
+                        <a href="../back/exam.php"><button><span>Iniciar</span></button></a>
                     </div>
                     <div class="progress-block">
                         <span class="label">60<span class="smaller">%</span></span>
