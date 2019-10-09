@@ -5,7 +5,7 @@
  * @date 27/09/2019
  * @brief A classe Tasks é responsavel pelo CRUD das tarefas no Firebase utilizando Realtime Database API. A versão da API para PHP não suporta 'event listeners'.
  * @version 0.0.2
- * @lastUpdate 04/10/2019
+ * @lastUpdate 09/10/2019
  */
 
 require_once './vendor/autoload.php';
@@ -57,8 +57,8 @@ class Tasks
         $ref = $this->refInput->getChild($title);
         $input = new Input(
             $title,
-            $ref->getChild('rightAnswer')->getSnapshot()->getValue(),
-            $ref->getChild('statement')->getSnapshot()->getValue()
+            $ref->getChild('statement')->getSnapshot()->getValue(),
+            $ref->getChild('rightAnswer')->getSnapshot()->getValue()
         );
 
         return $input;
