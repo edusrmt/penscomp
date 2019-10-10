@@ -8,9 +8,9 @@
  * @lastUpdate 09/10/2019
  */
 
-require_once './vendor/autoload.php';
-require_once 'Choice.php';
-require_once 'Input.php';
+require_once __DIR__ .  '/../vendor/autoload.php';
+require_once __DIR__ . '/Choice.php';
+require_once __DIR__ . '/Input.php';
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
@@ -20,7 +20,7 @@ class Tasks
 
     public function __construct()
     {
-        $acc = ServiceAccount::fromJsonFile('./secret/penscomp-ufrn-695c402a62de.json');
+        $acc = ServiceAccount::fromJsonFile(__DIR__ . '/../secret/penscomp-ufrn-695c402a62de.json');
         $this->db = (new Factory)->withServiceAccount($acc)->createDatabase();
         $this->refInput = $this->db->getReference('tasks')->getChild('input');
         $this->refChoice = $this->db->getReference('tasks/choice');

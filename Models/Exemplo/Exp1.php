@@ -1,7 +1,5 @@
 <?php
-require_once './Models/Tasks.php';
-require_once './Models/Input.php';
-require_once './Models/Choice.php';
+require_once __DIR__ .  '/../Models/Tasks.php'; //< Inclui também as classes das tarefas.
 
 $task = new Tasks();
 
