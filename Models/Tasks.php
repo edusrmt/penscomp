@@ -26,6 +26,20 @@ class Tasks
         $this->refChoice = $this->db->getReference('tasks/choice');
     }
 
+    //== METODOS GERAIS
+    public function getTasks( string $type ){
+        if( !isset($type) ) return [];
+        switch ($type){
+            case "input":
+                return $this->refInput->getChildKeys();
+                break;
+            case "choice":
+                return $this->refChoice->getChildKeys();
+                break;
+        }
+
+
+    }
     //== METODOS INPUT
 
     /**

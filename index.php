@@ -51,7 +51,7 @@
             <div id="signup" class="signup slide-up">
                 <div class="center">
                 <h2 onclick="slide_up(true)" class="form-title"><span>ou</span>Registrar</h2>
-                <form method="POST" action="../back/register.php">
+                <form method="POST" action="./back/register.php">
                     <div class="form-holder">                    
                         <input type="text" class="input" name="name" placeholder="Nome" />
                         <input type="email" class="input" name="email" placeholder="Email" />
