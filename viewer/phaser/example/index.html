@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Phaser Maze + Blockly - Test</title>
+
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <script src="JS-Interpreter/acorn_interpreter.js"></script>
+
+        <script src="phaser/dist/phaser.js"></script>
+    </head>
+    <body>
+        
+        <div id="game-container" style="width: 800px;float: left;"></div>
+        <div id="blocklyDiv" style="height: 600px; width: 600px; float: left;"></div>
+
+        <xml id="toolbox" style="display: none">
+            <block type="move_forward"></block>
+            <block type="turn">
+                <field name="SIDE">RIGHT</field>
+            </block>
+            <block type="turn">
+                <field name="SIDE">LEFT</field>
+            </block>
+            <block type="repeat_until_end"></block>
+        </xml>
+
+        <script src="game.js"></script>
+        <script src="blocks.js"></script>
+
+        <button type="button" name="button" onclick="run()">RUN</button>
+        <button type="button" name="button" onclick="reset()" id="reset">RESET</button>
+    </body>
+</html>

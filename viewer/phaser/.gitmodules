@@ -1,0 +1,9 @@
+[submodule "example/phaser"]
+	path = example/phaser
+	url = https://github.com/photonstorm/phaser.git
+[submodule "example/blockly"]
+	path = example/blockly
+	url = https://github.com/google/blockly.git
+[submodule "example/JS-Interpreter"]
+	path = example/JS-Interpreter
+	url = https://github.com/NeilFraser/JS-Interpreter.git

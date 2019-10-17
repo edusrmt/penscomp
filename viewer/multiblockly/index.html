@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>PENSCOMP</title>
+    
+	<!-- Carregando bibliotecas do Blockly -->
+	<script type="text/javascript" 	src="./js/blockly_compressed.js"></script>
+	<script type="text/javascript" 	src="./js/blocks_compressed.js"></script>
+  	<script type="text/javascript"	src="./js/javascript_compressed.js"></script>
+  	<script type="text/javascript"	src="./js/msg/en.js"></script>
+  	
+  	<!-- Carregando blocos e jogo do ctgamemaker --> 
+  	<script type="text/javascript"	src="./js/gameBlocks.js"></script>
+  	<script type="text/javascript"  src="./js/gamebuilder.js"></script>
+
+    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../common/css/task-viewer.css">
+    <link rel="stylesheet" href="../common/css/choice.css">
+</head>
+
+<body>
+    <header>
+        <a class="navigation" href="#">< ATIVIDADES</a>
+        <h1 class="logo">
+            <a href="/home">Pens<span>comp</span></a>            
+        </h1>
+        <a class="navigation" href="#">PULAR QUESTÃO ></a>
+    </header>
+
+    <div class="task-container">
+        <div class="task-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.
+        </div>
+        <div class="task-phaser">
+            <div id="editor-phaser"></div> 
+        </div>
+        <div class="answer-area">
+            <div class="options-wrapper">
+                <button class="phaser-option">
+                    <div id="blocklyDivOp1" class="phaser-injection"></div>
+                </button>
+                <button class="phaser-option">
+                    <div id="blocklyDivOp2" class="phaser-injection"></div>
+                </button>
+                <button class="phaser-option">
+                    <div id="blocklyDivOp3" class="phaser-injection"></div>
+                </button>
+                <button class="phaser-option">
+                    <div id="blocklyDivOp4" class="phaser-injection"></div>
+                </button>
+            </div>
+        </div> 
+    </div>
+
+	<!-- Carregando JavaScript da página -->
+	<script type="text/javascript" 	src="./js/index.js"></script>
+</body>
+</html>

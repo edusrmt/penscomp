@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Game</title>
+
+        <!-- Temporário -->
+        <style media="screen">
+            body {
+                margin: 0;
+                height: 100%;
+            }
+            #question {
+                display: block;
+                font-family: "Arial"
+            }
+            #phaser {
+
+            }
+            #teste {
+                border: none;
+                padding: 10px;
+                background: black;
+                color: white;
+            }
+            #blockly {
+                height: 100%;
+                width: calc(100% - 600px);
+                position: fixed;
+                right: 0;
+                top: 0;
+                border-style: ridge;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="question">
+        <h2> Crie um algoritmo usando os blocos para fazer com que o </h2>
+        <h2>carro dê uma volta na pista de corrida </h2>
+        </div>
+        <div>
+            <div id="phaser"></div>
+            <button type="button" name="button" id="teste">Executar</button>
+        </div>
+        <div id="blockly"></div>
+
+        <script src="dist/app.js"></script>
+    </body>
+</html>

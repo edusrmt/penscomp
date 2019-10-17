@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/tasks.css" />
 </head>
 <body>
+    <?php 
+        session_start();
+        //$_SESSION["init"] = 0;
+    ?>
     <!-- PANEL -->
     <aside class="sidebar">
         <!-- MENU -->

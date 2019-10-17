@@ -1,0 +1,29 @@
+{
+  "name": "ctgamemaker",
+  "version": "1.0.0",
+  "description": "----------------",
+  "main": "game.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch & live-server --port=8085"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://azanbertre@bitbucket.org/eduardoaranha/ctgamemaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/eduardoaranha/ctgamemaker#readme",
+  "devDependencies": {
+    "blockly": "git+https://github.com/google/blockly.git",
+    "js-interpreter": "git+https://github.com/azanbertre/JS-Interpreter.git",
+    "live-server": "^1.2.1",
+    "phaser": "^3.16.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {}
+}

@@ -22,7 +22,18 @@
         </h1>
         <a class="navigation" href="../back/exam.php">ENVIAR RESPOSTA ></a>
     </header>
-    
+    <div class="progress">
+        <a href="#" class="button-progress">Anterior</a>
+        <?php foreach ($_SESSION["tasks"] as $key => $value) {
+            if($value == 0){
+                echo "<div class='task-circle pending'></div>";
+            }
+            else{
+                echo "<div class='task-circle answered'></div>";
+            }
+        } ?>
+        <a href="../back/exam.php" class="button-progress">Próxima</a>
+    </div>
     <div class="task-container">
         <div class="task-text">
             <?php echo $task["statement"]; ?>
