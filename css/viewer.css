@@ -22,13 +22,17 @@ a.navigation:hover {
     color: white;
 }
 
-.task-container {
+.task-container, .answers-list {
     background-color: white;
     width: 90vw;
     margin: 5vh auto;
     border-radius: 5px;
     box-shadow: 0 0 3px black;
     padding: 20px;
+}
+
+.progress-container + .task-container {
+    margin-top: 0vh;
 }
 
 .task-text {
@@ -112,6 +116,8 @@ button.highlight:focus {
 .answer-area {
     padding: 20px;
     padding-bottom: 0;
+    border-bottom: 1px solid #3629a2;
+    padding-bottom: 20px;
 }
 
 a.jump {
@@ -193,4 +199,133 @@ input:focus {
 
 .submit-btn:focus {
     outline: none;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+    list-style-type: none;
+    float: left;
+    background-color: #cde0ff;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+li:hover {
+    color: whitesmoke;
+    transition: 100ms ease-in;
+    background-color: #94bdff;
+    cursor: pointer;    
+    box-shadow: 1px 1px 5px #5a97f8;
+}
+
+li.current-task {
+    border: 2px solid #3c65aa;
+}
+
+li.arrow {
+    width: 25px;
+    height: 25px;
+    background-color: #526a8f;
+    color: white;
+    font-weight: bold;
+}
+
+.submit-btn {
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 25px auto 10px auto;
+    padding: 5px 45px;
+    width: 15%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+.submit-btn:hover {
+    background-position: 100% 0;    
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+.progress-container .has-answer {
+    background-color: #4481eb;
+    color: whitesmoke;
+}
+
+.answers-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: fit-content;    
+}
+
+table {
+    border-collapse: collapse;
+    padding: 5px;
+    width: 20vw;
+    border-radius: 10px;
+}
+
+tr + tr {
+    border-top: 1px solid #002564;
+}
+
+td + td, th + th {
+    border-left: 1px solid #002564;
+}
+
+td, th {
+    text-align: center;
+    padding: 7px;
+}
+
+td span {  
+    width: 15px;
+    font-weight: bold;
+}
+
+span.done {
+    color: green;
+}
+
+span.undone {
+    color: #3c65aa;
 }
