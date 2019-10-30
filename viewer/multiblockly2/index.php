@@ -21,11 +21,11 @@
 
 <body>
     <header>
-        <a class="navigation" href="../../php/tasks.php">< VOLTAR</a>
+        <a class="navigation" href="#">< VOLTAR</a>
         <h1 class="logo">
-            <a href="../../php/panel.php">Pens<span>comp</span></a>            
+            <a href="/home">Pens<span>comp</span></a>            
         </h1>
-        <a class="navigation" href="./">PULAR QUESTÃO ></a>
+        <a class="navigation" href="#">PULAR QUESTÃO ></a>
     </header>
 
     <div class="task-container">

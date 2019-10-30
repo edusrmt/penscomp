@@ -43,7 +43,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+<<<<<<< HEAD
       window.location.href = './php/panel.php';
+=======
+      window.location.href = '../php/panel.php';
+>>>>>>> parent of 5269d647... Protótipo de mudanças no visualizador
       // ...
     } else {
       // User is signed out.

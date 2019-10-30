@@ -133,7 +133,7 @@ html, body {
     cursor: pointer;
 }
 
-/*.opt-button:hover {
+.opt-button:hover {
     background-image: linear-gradient(to right, #25aae1, #3f86ed);
     border-color: white;
     background-size: 300% 100%;
@@ -144,19 +144,6 @@ html, body {
 .single-selected {
     border-color: green;
     box-shadow: 1px 1px 5px green;
-}*/
-
-.opt-button:hover {
-    border-color: green;
-    box-shadow: 1px 1px 5px green;
-}
-
-.single-selected{
-    background-image: linear-gradient(to right, #25aae1, #3f86ed);
-    border-color: white;
-    background-size: 300% 100%;
-    color: white;
-    transition: 200ms;
 }
 
 .multi-selected {
