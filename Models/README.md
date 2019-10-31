@@ -8,7 +8,8 @@ contém a implementação de métodos de inserção, remoção, atualização e 
 tipo de tarefa.
 2. ```Input.php```: Classe modelo para as *tasks input*.
 3. ```Choice.php```: Classe modelo para as *tasks choice*.
-
+# Compilar
+1. Cria uma variavel ambiente utilizando ```export GOOGLE_APPLICATION_CREDENTIALS="secret/penscomp-ufrn-695c402a62de.json"```;
 ### Funções da class Tasks
 ~~Crie um objeto do tipo especifico da tarefa antes de passar como argumento da função.~~
 1. ```setInput( Input $input );```

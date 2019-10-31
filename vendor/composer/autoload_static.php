@@ -12,6 +12,7 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '27592325262b385204a263c2ab632d6e' => __DIR__ . '/..' . '/kreait/clock/src/Clock.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         'f7c6080b46f9fe41a46a657439674576' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase.php',
     );
@@ -23,11 +24,13 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
             'Superbalist\\Flysystem\\GoogleStorage\\' => 36,
         ),
         'R' => 
         array (
             'Riverline\\MultiPartParser\\' => 26,
+            'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
         array (
@@ -61,11 +64,20 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Grpc\\Gcp\\' => 9,
+            'Grpc\\' => 5,
+            'Google\\Protobuf\\' => 16,
             'Google\\Cloud\\Storage\\' => 21,
+            'Google\\Cloud\\Firestore\\' => 23,
             'Google\\Cloud\\Core\\' => 18,
             'Google\\CRC32\\' => 13,
             'Google\\Auth\\' => 12,
+            'Google\\ApiCore\\' => 15,
+            'Google\\' => 7,
             'Giggsey\\Locale\\' => 15,
+            'GPBMetadata\\Google\\Protobuf\\' => 28,
+            'GPBMetadata\\Google\\Firestore\\' => 29,
+            'GPBMetadata\\Google\\' => 19,
         ),
         'F' => 
         array (
@@ -80,6 +92,10 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
         'Superbalist\\Flysystem\\GoogleStorage\\' => 
         array (
             0 => __DIR__ . '/..' . '/superbalist/flysystem-google-storage/src',
@@ -87,6 +103,10 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         'Riverline\\MultiPartParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/riverline/multipart-parser/src/Riverline/MultiPartParser',
+        ),
+        'Ramsey\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -148,9 +168,25 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Grpc\\Gcp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/grpc-gcp/src',
+        ),
+        'Grpc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/grpc/grpc/src/lib',
+        ),
+        'Google\\Protobuf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/protobuf/src/Google/Protobuf',
+        ),
         'Google\\Cloud\\Storage\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-storage/src',
+        ),
+        'Google\\Cloud\\Firestore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-firestore/src',
         ),
         'Google\\Cloud\\Core\\' => 
         array (
@@ -164,9 +200,30 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         array (
             0 => __DIR__ . '/..' . '/google/auth/src',
         ),
+        'Google\\ApiCore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/gax/src',
+        ),
+        'Google\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/src',
+        ),
         'Giggsey\\Locale\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/locale/src',
+        ),
+        'GPBMetadata\\Google\\Protobuf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf',
+        ),
+        'GPBMetadata\\Google\\Firestore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-firestore/metadata',
+        ),
+        'GPBMetadata\\Google\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata',
+            1 => __DIR__ . '/..' . '/google/gax/metadata',
         ),
         'Firebase\\JWT\\' => 
         array (
@@ -180,6 +237,10 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         array (
             0 => __DIR__ . '/..' . '/fig/http-message-util/src',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/google/grpc-gcp/src/generated',
     );
 
     public static $prefixesPsr0 = array (
@@ -197,6 +258,7 @@ class ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit6c804e5d64eefe4a30b9fbda28a6bdc6::$prefixesPsr0;
 
         }, null, ClassLoader::class);

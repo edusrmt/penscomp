@@ -8,207 +8,289 @@
  * @lastUpdate 09/10/2019
  */
 
-require_once __DIR__ .  '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/Choice.php';
 require_once __DIR__ . '/Input.php';
 
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\ServiceAccount;
+use Google\Cloud\Firestore\FirestoreClient;
 
 class Tasks
 {
-
-    public function __construct()
+    function __construct()
     {
-        $acc = ServiceAccount::fromJsonFile(__DIR__ . '/../secret/penscomp-ufrn-695c402a62de.json');
-        $this->db = (new Factory)->withServiceAccount($acc)->createDatabase();
-        $this->refInput = $this->db->getReference('tasks')->getChild('input');
-        $this->refChoice = $this->db->getReference('tasks/choice');
+        $this->db = new FirestoreClient();
+        $this->refCInput = $this->db->collection('input');
+        $this->refCChoice = $this->db->collection('choice');
     }
 
-    //== METODOS GERAIS
-    public function getTasks( string $type ){
-        if( !isset($type) ) return [];
-        switch ($type){
+    /*TODO*/
+    public function getTasks( string $type )
+    {
+        if( !isset( $type ) ) throw new Exception('$type não foi inicializado.');
+        switch( $type )
+        {
             case "input":
-                return $this->refInput->getChildKeys();
+                return $this->getAllInput();
                 break;
             case "choice":
-                return $this->refChoice->getChildKeys();
+                return $this->getAllChoice();
                 break;
+
         }
-
-
     }
-    //== METODOS INPUT
 
+    //== METODOS DAS TAREFAS INPUT
     /**
      * @brief   Insere uma nova tarefa input no banco de dados.
-     * @param Input $input  O input a ser inserido.
+     * @param Input $input O input a ser inserido.
      * @return  bool true caso a nova tarefa input for inserida, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
+     * @throws Exception
+     *
      */
     public function setInput( Input $input )
     {
-        if ( is_null( $input->getTitle() ) ) { return false; }
-        // Verifica se não existe uma tarefa com esse titulo no banco de dados
-        if( !$this->refInput->getChild( $input->getTitle() )->getSnapshot()->exists() ) {
-            $this->refInput->getChild( $input->getTitle() )->getChild( 'rightAnswer' )->set( $input->getRightAnswer() );
-            $this->refInput->getChild( $input->getTitle() )->getChild( 'statement' )->set( $input->getStatement() );
-            return true;
-        } //<
-        return false;
+        try {
+            // Verifica se algum campo está vazio.
+            if ( is_null($input->getTitle()) ||
+                is_null($input->getRightAnswer()) ||
+                is_null($input->getStatement())
+            ) return null;
+            $data = [
+                'title' => $input->getTitle(),
+                'statement' => $input->getStatement(),
+                'rightAnswer' => $input->getRightAnswer()
+            ];
+            $ref = $this->refCInput->add($data);
+            return $ref->id();
+        } catch ( Exception $e ) {
+            throw new Exception( $e->getMessage() );
+        }
     }
 
     /**
      * @brief Obtem uma tarefa input do firebase com o titulo informado.
-     * @param string $title Titulo do imput.
+     * @param string $key Titulo do imput.
      * @return Input Retorna um input com as informações retiradas do firebase, caso o input não exista as informações vão está null.
-     * @throws \Kreait\Firebase\Exception\ApiException
+     * @throws Exception
      */
-    public function getInputEqualTo( string $title )
+    public function getInputEqualTo( string $key )
     {
-        $ref = $this->refInput->getChild($title);
-        $input = new Input(
-            $title,
-            $ref->getChild('statement')->getSnapshot()->getValue(),
-            $ref->getChild('rightAnswer')->getSnapshot()->getValue()
-        );
-
-        return $input;
+        try{
+            $snapshot = $this->refCInput->document($key)->snapshot();
+            if($snapshot->exists()){
+                $data = $snapshot->data();
+                $input = new Input(
+                    $snapshot->id(),
+                    $data['title'],
+                    $data['statement'],
+                    $data['rightAnswer']
+                );
+                return $input;
+            }
+            return new Input();
+        } catch ( Exception $e ){
+            throw new Exception($e->getMessage());
+        }
     }
 
     /**
      * @brief Atualizada um nó especifico de um tarefa input no firebase.
      * @param Input $newInput O novo imput, obs.: O titulo não pode ser alterado.
      * @return bool true caso a alteração seja concluida, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
+     * @throws Exception
      */
     public function updateInput( Input $newInput )
     {
-        $ref = $this->refInput->getChild( $newInput->getTitle() );
-
-        if( $ref->getSnapshot()->exists() )
-        {
-            $ref->getChild('statement')->set($newInput->getStatement());
-            $ref->getChild('rightAnswer')->set($newInput->getRightAnswer());
-            return true;
+        try{
+            if( is_null( $newInput->getKey() ) ) return false;
+            $snapshot = $this->refCInput->document($newInput->getKey())->snapshot();
+            if($snapshot->exists()){
+                $data = [
+                    [ 'path' => 'title', 'value' => $newInput->getTitle() ],
+                    [ 'path' => 'statement', 'value' => $newInput->getStatement() ],
+                    [ 'path' => 'rightAnswer', 'value' => $newInput->getRightAnswer() ]
+                ];
+                $this->refCInput->document($newInput->getKey())->update($data);
+                return true;
+            }
+            return false;
+        }catch (Exception $e) {
+            throw  new Exception( $e->getMessage() );
         }
-
-        return false;
     }
 
     /**
      * @brief Remove um nó especifico de uma tarefa input no firebase
-     * @param $title Titlo do nó a ser deletado.
+     * @param $key Titlo do nó a ser deletado.
      * @return bool True caso o nó seja removido do banco, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
+     * @throws Exception
      */
-    public function removeInput( $title )
+    public function removeInput( $key )
     {
-        $ref = $this->db->getReference($this->dbname)->getChild($this->tn_input);
-        if( $ref->getSnapshot()->hasChild($title) )
-        {
-            $ref->getChild($title)->remove();
-            return true;
+        try{
+            $snapshot = $this->refCInput->document( $key )->snapshot();
+            if( $snapshot->exists() )
+            {
+                $this->refCInput->document( $key )->delete();
+                return true;
+            }
+            return false;
+        } catch ( Exception $e ){
+            throw new Exception( $e->getMessage() );
         }
     }
 
-    //==  METODOS CHOICE
-
     /**
-     * @brief Insere uma nova tarefa choice no banco de dados.
-     * @param Choice $choice A choice a ser inserida.
-     * @return bool True caso o novo nó da choice for adicionado ao banco de dados, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
+     * @brief Retorna todos as tarefas do tipo 'input' que estão armazenadas no firebase.
+     * @return array
+     * @throws Exception
      */
-    public function setChoice( Choice $choice )
-    {
-        $ref = $this->refChoice->getChild( $choice->getTitle() );
-        if( !$ref->getSnapshot()->exists() )
-        {
-            $ref->getChild('statement')->set( $choice->getStatement() );
-            $ref->getChild('options')->set( $choice->getOptions() );
-            $ref->getChild('rightAnswer')->set( $choice->getRightAnswer() );
-            $ref->getChild('layout')->set( $choice->getLayout() );
-            return true;
-        }
-        return false;
-    }
 
-    /**
-     * @brief Obtem uma tarefa choice do firebase com o titulo informado.
-     * @param string $title Titulo da choice
-     * @return Choice Uma tarefa choice com as informações retiradas do firebase, caso a tarefa não exista as inf são null.
-     * @throws \Kreait\Firebase\Exception\ApiException
-     */
-    public function getChoiceEqualTo( string $title )
-    {
-        $ref = $this->refChoice->getChild($title);
-        $choice = new Choice(
-            $title,
-            $ref->getChild('statement')->getSnapshot()->getValue(),
-            $ref->getChild('options')->getSnapshot()->getValue(),
-            $ref->getChild('rightAnswer')->getSnapshot()->getValue(),
-            $ref->getChild('layout')->getSnapshot()->getValue()
-        );
-        return $choice;
-    }
-
-    /**
-     * @brief Atualiza as informações de uma tarefa choice especifica no firebase.
-     * @param Choice $newChoice Tarefa choice com as informações necessarias para alterar as informações.
-     * @return bool True caso consiga alterar as informações da tarefa, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
-     */
-    public function updateChoice( Choice $newChoice )
-    {
-        $ref = $this->refChoice->getChild($newChoice->getTitle() );
-        if( $ref->getSnapshot()->exists() )
-        {
-            $ref->update([
-                'statement' => $newChoice->getStatement(),
-                'options' => $newChoice->getOptions(),
-                'rightAnswer' => $newChoice->getRightAnswer(),
-                'layout' => $newChoice->getLayout()
-            ]);
-
-            return true;
+    private function getAllInput(/*empty*/){
+        try{
+            $snapshot = $this->refCInput->orderBy('title', 'asc')->documents();
+            $data = array();
+            foreach ( $snapshot as $task ){
+                $input = new Input(
+                    $task->id(),
+                    $task['title'],
+                    $task['statement'],
+                    $task['rightAnswer']
+                );
+                array_push($data, $input);
+            }
+            return $data;
+        }catch (Exception $e) {
+            throw new Exception( $e->getMessage() );
         }
 
-        return false;
     }
 
-    /**
-     * @brief Remove uma tarefa choice do firebase com o titulo informado.
-     * @param $title Titulo da choice que deseja remover.
-     * @return bool True caso consiga removar do firebase, false caso contrario.
-     * @throws \Kreait\Firebase\Exception\ApiException
-     */
-    public function removeChoice( $title )
-    {
-        $ref = $this->refChoice->getChild( $title );
-        if( $ref->getSnapshot()->exists() )
-        {
-            $ref->remove();
-            return true;
+    //== METODOS DAS TAREFAS CHOICE
+
+    public function setChoice( Choice $choice ){
+        try{
+            if(
+                is_null( $choice->getTitle() ) ||
+                is_null( $choice->getStatement() ) ||
+                is_null( $choice->getOptions() ) ||
+                is_null( $choice->getRightAnswer() ) ||
+                is_null( $choice->getLayout() )
+            ) return null;
+            $data = [
+                'title' => $choice->getTitle(),
+                'statement' => $choice->getStatement(),
+                'options' => $choice->getOptions(),
+                'rightAnswer' => $choice->getRightAnswer(),
+                'layout' => $choice->getLayout()
+            ];
+            $ref = $this->refCChoice->add($data);
+            return $ref->id();
+        } catch( Exception $e ){
+            throw new Exception( $e->getMessage() );
+
         }
+    }
+    public function getChoiceEqualTo( string $key ){
+        try{
+            $snapshot = $this->refCChoice->document( $key )->snapshot();
+            if( $snapshot->exists() ){
+                $data = $snapshot->data();
+                $choice = new Choice(
+                    $snapshot->id(),
+                    $data['title'],
+                    $data['statement'],
+                    $data['options'],
+                    $data['rightAnswer'],
+                    $data['layout']
+			    );
+			return $choice;
+		    }
+            return new Choice();
+        } catch( Exception $e ) {
+            throw new Exception( $e->getMessage() );
+        }
+    }
+    public function updateChoice( Choice $newChoice ){
+        try{
+            if(
+                is_null( $newChoice->getKey() )||
+                is_null( $newChoice->getTitle() ) ||
+                is_null( $newChoice->getStatement() ) ||
+                is_null( $newChoice->getOptions() ) ||
+                is_null( $newChoice->getRightAnswer() ) ||
+                is_null( $newChoice->getLayout() )
+            ) return false;
+            $snapshot = $this->refCChoice->document($newChoice->getKey())->snapshot();
+            if( $snapshot->exists() ){
+                $data = [
+                    [ 'path' => 'title', 'value' => $newChoice->getTitle() ],
+                    [ 'path' => 'statement', 'value' => $newChoice->getStatement() ],
+                    [ 'path' => 'options', 'value' => $newChoice->getOptions() ],
+                    [ 'path' => 'rightAnswer', 'value' => $newChoice->getRightAnswer() ],
+                    [ 'path' => 'layout', 'value' => $newChoice->getLayout() ]
+                ];
+                $this->refCChoice->document($newChoice->getKey())->update( $data );
+                return true;
+            }
+            return false;
+        } catch ( Exception $e ) {
+            throw new Exception( $e->getMessage() );
+        }
+    }
+    public function removeChoice( $key ){
+        try{
+            $snapshot = $this->refCChoice->document($key)->snapshot();
+            if( $snapshot->exists() ){
+                $this->refCChoice->document($key)->delete();
+                return true;
+            }
+            return false;
+        } catch( Exception $e ){
+            throw new Exception($e->getMessage());
+        }
+    }
+    private function getAllChoice(){
+        try{
+            $documents = $this->refCChoice->orderBy('title', 'asc')->documents();
+            $arr = array();
+            foreach ($documents as $document ) {
+			if( $document->exists() ){
+                $data = $document->data();
+                $choice = new Choice(
+                    $document->id(),
+                    $data['title'],
+					$data['statement'],
+					$data['options'],
+					$data['rightAnswer'],
+					$data['layout']
+				);
+				array_push($arr, $choice);
+			}
+		}
+            return $arr;
 
-        return false;
+        } catch (Exception $e) {
+            throw new Exception( $e->getMessage() );
+
+        }
     }
 
-    //== ATRIBUTOS
-
     /**
-     * @var \Kreait\Firebase\Database Armazena uma referencia ao banco de dados do firebase.
+     * @var FirestoreClient
      */
-    private $db; //database
+    private $db;
     /**
-     * @var \Kreait\Firebase\Database\Reference Armazena uma referencia ao nó das tarefas Input.
+     * @brief Armazena uma refêrencia a coleção das tarefas 'input'.
+     * @var \Google\Cloud\Firestore\CollectionReference
      */
-    private $refInput;
+    private $refCInput;
     /**
-     * @var \Kreait\Firebase\Database\Reference Armazena uma referencia ao nó das tarefas choice.
+     * @var \Google\Cloud\Firestore\CollectionReference
      */
-    private $refChoice;
+    private $refCChoice;
 }
+
+$task = new Tasks();
+
+var_dump($task->removeChoice( '9205aa84c35c4d01a4c3'));

@@ -3,6 +3,7 @@
     "description": "Plataforma de treinamento e avaliação de alunos em Pensamento Computacional.",
     "type": "project",
     "require": {
-        "kreait/firebase-php": "^4.31"
+        "kreait/firebase-php": "^4.31",
+        "google/cloud-firestore": "^1.9"
     }
 }
