@@ -12,13 +12,18 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/Choice.php';
 require_once __DIR__ . '/Input.php';
 
+use Google\Cloud\Storage\StorageClient;
 use Google\Cloud\Firestore\FirestoreClient;
 
 class Tasks
 {
     function __construct()
     {
-        $this->db = new FirestoreClient();
+        $config = [
+            'keyFile' => json_decode(file_get_contents(__DIR__.'/../secret/penscomp-ufrn-695c402a62de.json'), true),
+            'projectId' => 'penscomp-ufrn'
+        ];
+        $this->db = new FirestoreClient( $config );
         $this->refCInput = $this->db->collection('input');
         $this->refCChoice = $this->db->collection('choice');
     }
@@ -276,6 +281,20 @@ class Tasks
         }
     }
 
+    private function auth_cloud_explicit($projectId, $serviceAccountPath)
+    {
+        $config = [
+            'keyFilePath' => $serviceAccountPath,
+            'projectId' => $projectId,
+        ];
+        $storage = new StorageClient($config);
+        print $serviceAccountPath.PHP_EOL;
+        # Make an authenticated API request (listing storage buckets)
+        foreach ($storage->buckets() as $bucket) {
+            printf('Bucket: %s' . PHP_EOL, $bucket->name());
+        }
+    }
+
     /**
      * @var FirestoreClient
      */
@@ -290,7 +309,3 @@ class Tasks
      */
     private $refCChoice;
 }
-
-$task = new Tasks();
-
-var_dump($task->removeChoice( '9205aa84c35c4d01a4c3'));

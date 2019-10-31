@@ -4,6 +4,7 @@
     "type": "project",
     "require": {
         "kreait/firebase-php": "^4.31",
-        "google/cloud-firestore": "^1.9"
+        "google/cloud-firestore": "^1.9",
+        "google/cloud-storage": "^1.15"
     }
 }

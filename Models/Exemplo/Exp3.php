@@ -19,11 +19,8 @@
 
 <?php
     require_once __DIR__ . '/../Tasks.php';
-    //require_once __DIR__ . '../Input.php';
-
     $task = new Tasks();
-
-    $input = $task->getInputEqualTo('Bolas'); //< Variavel do tipo Input
+    $input = $task->getInputEqualTo('463e0fd113214cecb442'); //< Variavel do tipo Input
     echo '<div class="task-container"><div class="task-text">';
     echo $input->getStatement();
     echo '</div><div class="answer-area">';
