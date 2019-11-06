@@ -12,10 +12,11 @@
     <!-- MENU -->
     <div class="menu-container">
         <h1 class="logo">
-            <a href="./panel.php">Pens<span>comp</span></a>
+            <a href="./index.php">Pens<span>comp</span></a>
         </h1>
         <nav class="nav">
             <ul>
+                <?php //include($nav_bar);?>
                 <li class="active"><a href="./panel.php">Início</a></li>
                 <li><a href="./tasks.php">Atividades</a></li>
                 <li><a href="./panel.php">Opções</a></li>

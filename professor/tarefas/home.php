@@ -7,15 +7,12 @@ $pairsTarefas = array( "input"=>"Entrada", "choice"=>"Múltipla Escolha" );
 $tasks = new Tasks();
 
 print "<form name=\"fmSelecionarTarefa\" method=\"post\" action=\"page.php\">";
-wfselectBox("sbTarefas", $pairsTarefas , "input");
-wfsubmitButton("btnCriarTarefa", "Criar");
-wfsubmitButton("btnFiltrarTarefa", "Filtrar");
+wfSelectBox("sbTarefas", $pairsTarefas , "input");
+wfSubmitButton("btnCriarTarefa", "Criar");
+wfSubmitButton("btnFiltrarTarefa", "Filtrar");
 print "</form>";
 
 print "<form name=\"fmListaTarefas\" method=\"post\" action =\"./editar.php\">";
-
-foreach ($tasks->getTasks("input") as $id=>$value) {
-    print "<p> [$id] - [$value] </p> <br>";
-}
-
+$inputs = $tasks->getTasks('input');
+print($inputs[0]->getKey());
 print "</form>";
