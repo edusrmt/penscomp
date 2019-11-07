@@ -30,7 +30,8 @@ function login () {
         var errorMessage = error.message;
         alert(errorMessage);
     });
-      
+    
+    window.location.href = '/panel';
 };
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -43,7 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-      window.location.href = './php/panel.php';
+      //window.location.href = '/panel';
       // ...
     } else {
       // User is signed out.

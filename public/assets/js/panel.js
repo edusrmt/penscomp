@@ -7,14 +7,14 @@ var firebaseConfig = {
     messagingSenderId: "1000000944631",
     appId: "1:1000000944631:web:267549075224bec26556f2"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
+// Initialize Firebase
+//firebase.initializeApp(firebaseConfig);
 
 function logout () {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        window.location.href='../index.php';
+        window.location.href='/home';
       }).catch(function(error) {
         // An error happened.
         console.log(error);

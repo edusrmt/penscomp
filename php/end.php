@@ -14,9 +14,9 @@
 </head>
 <body>
     <header>
-        <a href="./viewer.php" class="navigation" href="#">< VOLTAR</a>
+        <a href="/viewer/prev" class="navigation">< VOLTAR</a>
         <h1 class="logo">
-            <a href="./panel.php">Pens<span>comp</span></a>            
+            <a href="/panel">Pens<span>comp</span></a>            
         </h1>
         <a class="navigation" href="../back/exam.php?end=true">ENVIAR EXAME ></a>
     </header>   
