@@ -9,8 +9,8 @@
             <ul>
                 <li class="active"><a href="./panel.php">Início</a></li>
                 <li><a href="/task">Atividades</a></li>
-                <li><a href="/panelloginloginlogin">Opções</a></li>
-                <li onclick="logout();"><a>Sair</a></li>
+                <li><a href="/panel">Opções</a></li>
+                <li onclick="logout();"><a href="/home">Sair</a></li>
             </ul>
         </nav>
     </div>            

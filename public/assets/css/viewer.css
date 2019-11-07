@@ -1,4 +1,4 @@
-header {
+.viewer header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,7 +10,7 @@ header {
     box-shadow: 0 1px 5px black;
 }
 
-a.navigation {
+.viewer a.navigation {
     text-decoration: none;
     color: rgb(240, 235, 235);
     font-variant: small-caps;
@@ -18,11 +18,11 @@ a.navigation {
     cursor: pointer;
 }
 
-a.navigation:hover {
+.viewer a.navigation:hover {
     color: white;
 }
 
-.task-container, .answers-list {
+.viewer .task-container, .answers-list {
     background-color: white;
     width: 90vw;
     margin: 5vh auto;
@@ -31,17 +31,17 @@ a.navigation:hover {
     padding: 20px;
 }
 
-.progress-container + .task-container {
+.viewer .progress-container + .task-container {
     margin-top: 0vh;
 }
 
-.task-text {
+.viewer .task-text {
     border-bottom: 1px solid #3629a2;
     padding-bottom: 20px;
     text-align: justify;
 }
 
-.task-phaser {
+.viewer .task-phaser {
     border-bottom: 1px solid #3629a2;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -50,7 +50,7 @@ a.navigation:hover {
     justify-content: center;
 }
 
-#blockly {
+.viewer #blockly {
     display: inline-block;
     width: 40vw;
     height: 600px;
@@ -61,18 +61,18 @@ a.navigation:hover {
     overflow: hidden;   
 }    
 
-#phaser {
+.viewer #phaser {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
 }
 
-#phaser canvas {
+.viewer #phaser canvas {
     width: 40vw;
 }
 
-button.highlight {    
+.viewer button.highlight {    
     color: #3c65aa;
     cursor: pointer;
 	border-radius: 40px;
@@ -93,7 +93,7 @@ button.highlight {
     background-size: 300% 100%;
 }
 
-button.highlight span {
+.viewer button.highlight span {
     align-items: center;
 	background: #fff;
 	border-radius: 40px;
@@ -104,23 +104,23 @@ button.highlight span {
 	width: 100%;
 }
 
-button.highlight:hover span {
+.viewer button.highlight:hover span {
     background: transparent;
     color: #fff;
 }
 
-button.highlight:focus {
+.viewer button.highlight:focus {
     outline: none;
 }
 
-.answer-area {
+.viewer .answer-area {
     padding: 20px;
     padding-bottom: 0;
     border-bottom: 1px solid #3629a2;
     padding-bottom: 20px;
 }
 
-a.jump {
+.viewer a.jump {
     float: right;
     font-weight: bold;
     width: 18.5%;
@@ -129,7 +129,7 @@ a.jump {
     color: #002564;
 }
 
-.logo {
+.viewer .logo {
     text-transform: uppercase;
     font: 300 2em 'Righteous', cursive;
     text-align: center;
@@ -138,18 +138,18 @@ a.jump {
     transition: 100ms;
 }
 
-.logo:hover {
+.viewer .logo:hover {
     opacity: 1;
 }
 
-.logo a {
+.viewer .logo a {
     display: block;    
     color: #9fd3c7;
     text-decoration: none;
     transition: .15s linear color;
 }
 
-.logo a span {
+.viewer .logo a span {
     color: #70acb1;
     font-weight: 600;
     transition: .15s linear color;
@@ -157,7 +157,7 @@ a.jump {
 
 /* INPUT */
 
-input {
+.viewer input {
     width: 100%;
     height: 40px;
     border-radius: 15px;
@@ -167,11 +167,11 @@ input {
     border: 2px solid #4481eb;
 }
 
-input:focus {
+.viewer input:focus {
     box-shadow: 0 0 10px #4481eb;
 }
 
-.submit-btn {
+.viewer .submit-btn {
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
@@ -190,30 +190,30 @@ input:focus {
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
 }
 
-.submit-btn:hover {
+.viewer .submit-btn:hover {
     background-position: 100% 0;    
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 
-.submit-btn:focus {
+.viewer .submit-btn:focus {
     outline: none;
 }
 
-.progress-container {
+.viewer .progress-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-ul {
+.viewer ul {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-li {
+.viewer li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -233,7 +233,7 @@ li {
     box-sizing: border-box;
 }
 
-li:hover {
+.viewer li:hover {
     color: whitesmoke;
     transition: 100ms ease-in;
     background-color: #94bdff;
@@ -241,11 +241,11 @@ li:hover {
     box-shadow: 1px 1px 5px #5a97f8;
 }
 
-li.current-task {
+.viewer li.current-task {
     border: 2px solid #3c65aa;
 }
 
-li.arrow {
+.viewer li.arrow {
     width: 25px;
     height: 25px;
     background-color: #526a8f;
@@ -253,7 +253,7 @@ li.arrow {
     font-weight: bold;
 }
 
-.submit-btn {
+.viewer .submit-btn {
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
@@ -274,58 +274,58 @@ li.arrow {
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
 }
 
-.submit-btn:hover {
+.viewer .submit-btn:hover {
     background-position: 100% 0;    
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 
-.submit-btn:focus {
+.viewer .submit-btn:focus {
     outline: none;
 }
 
-.progress-container .has-answer {
+.viewer .progress-container .has-answer {
     background-color: #4481eb;
     color: whitesmoke;
 }
 
-.answers-list {
+.viewer .answers-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: fit-content;    
 }
 
-table {
+.viewer table {
     border-collapse: collapse;
     padding: 5px;
     width: 20vw;
     border-radius: 10px;
 }
 
-tr + tr {
+.viewer tr + tr {
     border-top: 1px solid #002564;
 }
 
-td + td, th + th {
+.viewer td + td, th + th {
     border-left: 1px solid #002564;
 }
 
-td, th {
+.viewer td, th {
     text-align: center;
     padding: 7px;
 }
 
-td span {  
+.viewer td span {  
     width: 15px;
     font-weight: bold;
 }
 
-span.done {
+.viewer span.done {
     color: green;
 }
 
-span.undone {
+.viewer span.undone {
     color: #3c65aa;
 }

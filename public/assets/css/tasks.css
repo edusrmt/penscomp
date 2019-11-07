@@ -50,7 +50,7 @@ p {
     transition: 100ms;
 }
 
-button {    
+a button {    
     color: #3c65aa;
     cursor: pointer;
 	border-radius: 40px;

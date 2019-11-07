@@ -36,6 +36,8 @@
     ?>
 </head>
 <body>
+    
+
     <?php
         require '../Application/autoload.php';
 
@@ -45,6 +47,8 @@
         $app = new App();
 
     ?>
+
+    
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
 
