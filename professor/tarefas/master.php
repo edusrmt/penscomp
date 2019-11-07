@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <a href="./../php/tasks.php" class="navigation" href="#">< TAREFAS</a>
+    <a href="./index.php" class="navigation" href="#">< TAREFAS</a>
     <h1 class="logo">
         <a href="./../php/panel.php">Pens<span>comp</span></a>
     </h1>

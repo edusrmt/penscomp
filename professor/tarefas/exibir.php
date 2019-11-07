@@ -1,7 +1,7 @@
 <?php
-if( $_SERVER["REQUEST_METHOD"] == "POST" ){
+if( $_SERVER["REQUEST_METHOD"] == "GET" ){
     session_start();
-
+    if(isset($_GET['btnDetalhar'])) $_SESSION['TASK_KEY'] = $_GET['btnDetalhar'];
     if( ( isset($_SESSION["TASK_TYPE"]) && !is_null($_SESSION["TASK_TYPE"]) ) &&
         ( isset($_SESSION["TASK_KEY"]) && !is_null($_SESSION["TASK_KEY"]) ) )
     {
