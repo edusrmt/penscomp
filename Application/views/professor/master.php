@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>PENSCOMP</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/panel.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/panel.css" />
 </head>
 <body>
 <!-- PANEL -->
@@ -12,14 +12,14 @@
     <!-- MENU -->
     <div class="menu-container">
         <h1 class="logo">
-            <a href="./panel.php">Pens<span>comp</span></a>
+            <a href="./index.php">Pens<span>comp</span></a>
         </h1>
         <nav class="nav">
             <ul>
-                <li class="active"><a href="./panel.php">Início</a></li>
-                <li><a href="./tasks.php">Atividades</a></li>
-                <li><a href="./panel.php">Opções</a></li>
-                <li onclick="logout();"><a>Sair</a></li>
+                <li><a>Início</a></li>
+                <li class="active"><a>Tarefas</a></li>
+                <li><a>Opções</a></li>
+                <li><a>Sair</a></li>
             </ul>
         </nav>
     </div>
@@ -27,6 +27,7 @@
 </aside>
 <section class="content">
     <div class="subjects-container">
+        <?php include($page_content); ?>
     </div>
 </section>
 <!-- PANEL -->
