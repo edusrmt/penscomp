@@ -44,6 +44,7 @@ if( array_key_exists('REQUESt_METHOD', $_SERVER)){
             } else {
                 session_start();
                 $erros[] = "Erro ao tentar atualizar a tarefa.";
+                $_SESSION['WARNING'] = $erros;
                 header("Location: ./../editar.php");
             }
         }

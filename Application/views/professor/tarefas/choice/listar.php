@@ -1,4 +1,5 @@
 <?php
+
 require_once(__DIR__."/../../../webform/utils.php");
 require_once(__DIR__."/../../../../models/Tasks.php");
 
@@ -18,13 +19,12 @@ if( isset($_SESSION['WARNING']) && !is_null($_SESSION['WARNING'])){
 //que vai ser mostrada ao usuario.
 $pairsTarefas = array( "input"=>"Entrada", "choice"=>"Múltipla Escolha" );
 
-
 //== MENU
 print "<form name=\"fmSelecionarTarefa\" method=\"get\"  id=\"form1\">";
 print "<table> <tr><td>";
 wfInput("iptSearch", "text");
 print "</td><td>";
-wfSelectBox("sbTarefas", $pairsTarefas , "input", 'input');
+wfSelectBox("sbTarefas", $pairsTarefas , "input", 'choice');
 print "</td><td>";
 wfButton("btnCriar", "submit", "Criar", null, null, false, "form1", "./criar.php");
 wfButton("btnFiltrar", "submit", "Filtrar",null, null, false, "form1", "./index.php");
@@ -46,7 +46,7 @@ if( isset($_SESSION['SEARCH_FIELD']) && !is_null($_SESSION['SEARCH_FIELD']) ){
     );
     $arr[] = $input1;
 }else{
-    $arr = $tasks->getTasks('input');
+    $arr = $tasks->getTasks('choice');
 }
 //== FIM DA COLETA DE INFORMAÇÕES
 

@@ -25,10 +25,11 @@ class Tasks
 
     public function getTasks( string $type )
     {
-        if( !isset( $type ) ) throw new Exception('$type não foi inicializado.');
+        if( !isset( $type ) ) throw new Exception($type.' não foi inicializado.');
         switch( $type )
         {
             case "input":
+
                 return $this->getAllInput();
                 break;
             case "choice":
@@ -149,6 +150,13 @@ class Tasks
         try{
             $snapshot = $this->refCInput->orderBy('title', 'asc')->documents();
             $data = array();
+            $input007 = new Input(
+                132123,
+                'zezim',
+                'statement',
+                'rightAnswer'
+            );
+            array_push($data, $input007);
             foreach ( $snapshot as $task ){
                 $input = new Input(
                     $task->id(),
