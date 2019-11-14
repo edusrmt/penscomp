@@ -141,3 +141,57 @@ html, body {
     color: white;
     transition: 200ms;
 }
+
+.selectedB {
+    background-image: linear-gradient(to right, #25aae1, #3f86ed);
+    border-color: #25aae1;
+    background-size: 300% 100%;
+    color: white;
+    transition: 200ms;
+}
+
+.phaser-injection {
+    height: 240px;
+    width: 400px;
+    border: none;
+}
+
+button.phaser-option {
+    height: 220px;
+    width: 245px;
+    box-sizing: border-box;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0;
+}
+
+.task-phaser {
+    border-bottom: 1px solid #3629a2;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#blockly {
+    display: inline-block;
+    width: 40vw;
+    height: 600px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: blue;
+    border-radius: 12px; 
+    overflow: hidden;   
+}    
+
+#phaser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#phaser canvas {
+    width: 40vw;
+}
