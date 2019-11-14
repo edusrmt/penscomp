@@ -1,4 +1,10 @@
-<?php $task = $data['task']; ?>   
+<?php $task = $data['task']; ?>
+<script type="text/javascript"  src="/assets/js/blockly/blockly_compressed.js"></script>
+<script type="text/javascript"  src="/assets/js/blockly/blocks_compressed.js"></script>
+<script type="text/javascript"  src="/assets/js/blockly/javascript_compressed.js"></script>
+<script type="text/javascript"  src="/assets/js/blockly/msg/en.js"></script>
+<script type="text/javascript"  src="/assets/js/blockly/gameBlocks.js"></script>
+<script type="text/javascript"  src="/assets/js/blockly/gamebuilder.js"></script>   
 <div class="viewer"> 
     <header>
         <a href="/task" class="navigation" href="#">< ATIVIDADES</a>
@@ -36,6 +42,14 @@
         <div class="task-text">
             <?php echo $task["statement"]; ?>
         </div>
+        <?php 
+            if($task["type"] == "choicePhaserBlockly"){
+                echo '<div class="task-phaser">';
+                echo '<span id="spanPhaser" style="display: none">'.$task["phaser"].'</span>';
+                echo '<div id="editor-phaser"></div>'; 
+                echo '</div>';
+            }
+        ?>
         <div class="answer-area">
             <form id="task-answer" action="/exam/answer" method="POST">
             <?php
@@ -69,6 +83,60 @@
                         
                     echo '</div>';
                     break;
+
+                    case "choiceBlockly":
+                    echo '<div class="options-wrapper">';
+
+                    echo '<input id="answer-input" type="text" name="answer" hidden>';
+
+                    $saved_answer = [];
+                        
+                    if($_SESSION["answers"][$_SESSION["currentTask"]] != null)
+                        $saved_answer = explode (",", $_SESSION["answers"][$_SESSION["currentTask"]]);
+
+                    $index = 0;
+                    foreach ($task["options"] as $opt) {
+                        echo '<button type="button" class="phaser-option opt-button" onclick="selecionar_blockly('.$index.')">';
+                        echo '<span id="span'.$index.'" style="display: none">'.$opt["text"].'</span>';
+                        echo '<div id="blocklyDivOp'.$index.'" class="phaser-injection"></div>';
+                        echo '</button>';
+
+                        if (in_array($index, $saved_answer)) {
+                            echo '<script>selecionar('.$index.');</script>';
+                        }
+
+                        $index++;
+                    }
+                        
+                    echo '</div>';
+                    break;
+
+                    case "choicePhaserBlockly":
+                    echo '<div class="options-wrapper">';
+
+                     echo '<input id="answer-input" type="text" name="answer" hidden>';
+
+                    $saved_answer = [];
+                        
+                    if($_SESSION["answers"][$_SESSION["currentTask"]] != null)
+                        $saved_answer = explode (",", $_SESSION["answers"][$_SESSION["currentTask"]]);
+
+                    $index = 0;
+                    foreach ($task["options"] as $opt) {
+                        echo '<button type="button" class="phaser-option opt-button" onclick="selecionar_blockly('.$index.')">';
+                        echo '<span id="span'.$index.'" style="display: none">'.$opt["text"].'</span>';
+                        echo '<div id="blocklyDivOp'.$index.'" class="phaser-injection"></div>';
+                        echo '</button>';
+
+                        if (in_array($index, $saved_answer)) {
+                            echo '<script>selecionar('.$index.');</script>';
+                        }
+
+                        $index++;
+                    }
+                        
+                    echo '</div>';
+                    break;
                 }
             ?>
             </form>
@@ -77,3 +145,11 @@
         <button class="submit-btn" onclick="salvar()">Salvar</button>  
     </div>  
 </div>
+<?php 
+    if($task["type"] == "choiceBlockly"){
+        echo '<script src="/assets/js/blockly/choiceBlockly.js"></script>';
+    }
+    else if($task["type"] == "choicePhaserBlockly"){
+        echo '<script src="/assets/js/blockly/choiceBlocklyPhaser.js"></script>';
+    }
+?> 

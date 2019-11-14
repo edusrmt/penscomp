@@ -1,0 +1,27 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="startBlocks3" style="display: none">
+      <block type="repeat_until_end" x="20" y="20">
+        <statement name="DO">
+          <block type="move_forward">
+            <next>
+              <block type="turn">
+                <field name="SIDE">RIGHT
+                </field>
+                <next>
+                  <block type="move_forward">
+                    <next>
+                      <block type="move_forward" >
+                        <next>
+                          <block type="turn">
+                            <field name="SIDE">RIGHT</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </xml>

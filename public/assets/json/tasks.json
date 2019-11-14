@@ -1,5 +1,32 @@
 [
     {
+      "type": "choiceBlockly",
+      "title": "Multiblockly2",
+      "statement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.",
+      "options": [
+        { "text": "bloco1" },
+        { "text": "bloco2" },
+        { "text": "bloco3" },
+        { "text": "bloco4" }
+      ],
+      "rightAnswer": "3",
+      "layout": "horiz"
+    },
+    {
+      "type": "choicePhaserBlockly",
+      "title": "Multiblockly",
+      "statement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.",
+      "phaser": "jogo",
+      "options": [
+        { "text": "bloco1" },
+        { "text": "bloco2" },
+        { "text": "bloco3" },
+        { "text": "bloco4" }
+      ],
+      "rightAnswer": "3",
+      "layout": "horiz"
+    },
+    {
       "type": "choice",
       "title": "Verdade",
       "statement": "José é um grande mentiroso, mas segue regras estritas sobre os momentos em que fala a verdade e quando diz mentira. Ele fala a verdade sempre nas segundas, quartas e sextas. Nos outros dias, ele sempre mente. Um dia, ele falou “Amanhã falarei a verdade”. Que dia da semana ele disse isso?",

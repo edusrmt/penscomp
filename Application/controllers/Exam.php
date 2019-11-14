@@ -8,7 +8,7 @@ class Exam extends Controller
         $Exams = $this->model('Exams');
         $exam = $Exams::loadExam();
 
-        session_start();
+        //session_start();
         $_SESSION['currentTask'] = 0;
         $_SESSION['examSize'] = count($exam);
 
@@ -22,7 +22,7 @@ class Exam extends Controller
         $Exams = $this->model('Exams');
         $exam = $Exams::loadExam();
 
-        session_start();
+        //session_start();
         $_SESSION["currentTask"] += 1;
 
         if ($_SESSION["currentTask"] >= $_SESSION['examSize'])
@@ -35,7 +35,7 @@ class Exam extends Controller
         $Exams = $this->model('Exams');
         $exam = $Exams::loadExam();
 
-        session_start();
+        //session_start();
         $_SESSION["currentTask"] -= 1;
 
         if ($_SESSION["currentTask"] < 0)
@@ -48,14 +48,14 @@ class Exam extends Controller
         $Exams = $this->model('Exams');
         $exam = $Exams::loadExam();
 
-        session_start();
+        //session_start();
         $_SESSION["currentTask"] = $index;
 
         $this->render($exam[$_SESSION['currentTask']]);
     }
 
     public function answer() {
-        session_start();
+        //session_start();
         $_SESSION["answers"][$_SESSION["currentTask"]] = $_POST["answer"];
         $this->next();
     }
