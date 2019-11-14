@@ -15,6 +15,7 @@ if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
     $task = new Tasks();
     $choice = $task->getChoiceEqualTo($_SESSION['TASK_KEY']);
     if( !is_null($choice->getKey()) ){
+        print "<form id='formTabela'>";
         wfHyperLinkA("Chave:");
         wfInput("iptKey", "text", $choice->getKey(), null, false);
         print "<br/>";
@@ -32,7 +33,7 @@ if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
         wfHyperLinkA("Resposta Correta:");
         wfInput("iptRightAnswer", "text", $choice->getRightAnswer(), null, false);
         print "<br/>";
-        print "<form id='formTabela'>";
+
         wfButton("btnConfirmar", "submit", "Confirmar", null, "submit-btn", false, null, './choice/editChoice.php', 'post');
         wfButton("btnCancelar", "submit", "Cancelar", null, "submit-btn", false, null, './exibir.php', 'get');
         print "</form>";

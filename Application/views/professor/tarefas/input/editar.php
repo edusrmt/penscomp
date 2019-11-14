@@ -14,23 +14,25 @@ if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
         print '</li></ul>';
         unset($_SESSION['WARNING']);
     }
+    $task = new Tasks();
+    $input = $task->getInputEqualTo($_SESSION['TASK_KEY']);
     if( !is_null($input->getKey()) ){
+        print "<form id='formTabela'>";
         wfHyperLinkA("Chave:");
         wfInput("iptKey", "text", $input->getKey(), null, true);
         print "<br/>";
         wfHyperLinkA("Titulo:");
-        wfInput("iptTitle", "text", $input->getTitle(), null, true);
+        wfInput("iptTitle", "text", $input->getTitle(), null, false);
         print "<br/>";
         wfHyperLinkA("Corpo da Questão:");
-        wfInput("iptStatement", "text", $input->getStatement(), null, true);
+        wfInput("iptStatement", "text", $input->getStatement(), null, false);
         print "<br/>";
         wfHyperLinkA("Resposta Correta:");
-        wfInput("iptRightAnswer", "text", $input->getRightAnswer(), null, true);
+        wfInput("iptRightAnswer", "text", $input->getRightAnswer(), null, false);
         print "<br/>";
-        print "<form id='formTabela'>";
-        wfButton("btnConfirmar", "submit", "Confirmar", null, "submit-btn", false, null, './input/editInput.php', 'post');
-        wfButton("btnCancelar", "submit", "Cancelar", null, "submit-btn", false, null, './exibir.php', 'get');
         print "</form>";
+        wfButton("btnConfirmar", "submit", "Confirmar", null, "submit-btn", false, 'formTabela', './input/editInput.php', 'post');
+        wfButton("btnCancelar", "submit", "Cancelar", null, "submit-btn", false, null, './exibir.php', 'get');
     }
     else header("Location: ./index.php");
 

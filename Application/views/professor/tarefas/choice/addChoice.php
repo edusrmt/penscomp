@@ -5,20 +5,6 @@ use Application\models\Tasks;
 use Application\models\Input;
 use Application\models\Choice;
 
-//== ZONA DE TESTE
-$_SERVER['REQUEST_METHOD'] = 'POST';
-$_POST['iptTitle'] = 'Questão das Somas';
-$_POST['iptStatement'] = 'Se a soma de 1 com 2 é 3, quando é a soma de 3 com -1?';
-$_POST['iptRightAnswer'] = '2';
-$_POST['iptOp1'] = 3;
-$_POST['iptOp2'] = 4;
-$_POST['iptOp3'] = 2;
-$_POST['iptOp4'] = 7;
-$_POST['iptOp5'] = 10;
-$_POST['iptOp6'] = null;
-$_POST['iptOp7'] = null;
-//= FIM DA ZONA
-
 if(array_key_exists('REQUEST_METHOD', $_SERVER)){
     if( $_SERVER['REQUEST_METHOD'] == 'POST'){
         $erros = array();

@@ -4,7 +4,7 @@ require_once(__DIR__.'/../../../../models/Tasks.php');
 use Application\models\Tasks;
 Use Application\models\Input;
 
-if( array_key_exists('REQUESt_METHOD', $_SERVER)){
+if( array_key_exists('REQUEST_METHOD', $_SERVER)){
     if( $_SERVER['REQUEST_METHOD'] == 'POST'){
         $erros = array();
         if( strlen($_POST['iptTitle']) == 0 ){
