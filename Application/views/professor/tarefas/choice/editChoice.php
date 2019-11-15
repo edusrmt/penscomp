@@ -25,17 +25,17 @@ if( array_key_exists('REQUEST_METHOD', $_SERVER)){
         if(array_key_exists('iptOp1', $_POST))
         {if( strlen($_POST['iptOp1']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
         if(array_key_exists('iptOp2', $_POST))
-        {if( strlen($_POST['iptOp2']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        {if( strlen($_POST['iptOp2']) != 0 ) $op[] = array( 'text' => $_POST['iptOp2']);}
         if(array_key_exists('iptOp3', $_POST))
-        { if( strlen($_POST['iptOp3']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        { if( strlen($_POST['iptOp3']) != 0 ) $op[] = array( 'text' => $_POST['iptOp3']);}
         if(array_key_exists('iptOp4', $_POST))
-        {if( strlen($_POST['iptOp4']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        {if( strlen($_POST['iptOp4']) != 0 ) $op[] = array( 'text' => $_POST['iptOp4']);}
         if(array_key_exists('iptOp5', $_POST))
-        { if( strlen($_POST['iptOp5']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        { if( strlen($_POST['iptOp5']) != 0 ) $op[] = array( 'text' => $_POST['iptOp5']);}
         if(array_key_exists('iptOp6', $_POST))
-        {if( strlen($_POST['iptOp6']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        {if( strlen($_POST['iptOp6']) != 0 ) $op[] = array( 'text' => $_POST['iptOp6']);}
         if(array_key_exists('iptOp7', $_POST))
-        {if( strlen($_POST['iptOp7']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);}
+        {if( strlen($_POST['iptOp7']) != 0 ) $op[] = array( 'text' => $_POST['iptOp7']);}
 
         if( count($op) == 0 ) $erros[] = "Informe Opções pra Tarefa.";
 
@@ -50,9 +50,10 @@ if( array_key_exists('REQUEST_METHOD', $_SERVER)){
             header("Location: ./../editar.php");
         }
         else {
+            session_start();
             $task = new Tasks();
             $choice = new Choice(
-                null,
+                $_SESSION['TASK_KEY'],
                 $_POST['iptTitle'],
                 $_POST['iptStatement'],
                 $op,
@@ -68,6 +69,7 @@ if( array_key_exists('REQUEST_METHOD', $_SERVER)){
             } else {
                 session_start();
                 $erros[] = "Erro ao tentar atualizar a tarefa.";
+                $erros[] = $choice->getKey();
                 $_SESSION['WARNING'] = $erros;
                 header("Location: ./../editar.php");
             }

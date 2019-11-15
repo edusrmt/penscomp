@@ -26,12 +26,12 @@ if(array_key_exists('REQUEST_METHOD', $_SERVER)){
         }*/
 
         if( strlen($_POST['iptOp1']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp2']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp3']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp4']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp5']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp6']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
-        if( strlen($_POST['iptOp7']) != 0 ) $op[] = array( 'text' => $_POST['iptOp1']);
+        if( strlen($_POST['iptOp2']) != 0 ) $op[] = array( 'text' => $_POST['iptOp2']);
+        if( strlen($_POST['iptOp3']) != 0 ) $op[] = array( 'text' => $_POST['iptOp3']);
+        if( strlen($_POST['iptOp4']) != 0 ) $op[] = array( 'text' => $_POST['iptOp4']);
+        if( strlen($_POST['iptOp5']) != 0 ) $op[] = array( 'text' => $_POST['iptOp5']);
+        if( strlen($_POST['iptOp6']) != 0 ) $op[] = array( 'text' => $_POST['iptOp6']);
+        if( strlen($_POST['iptOp7']) != 0 ) $op[] = array( 'text' => $_POST['iptOp7']);
         if( count($op) == 0 ) $erros[] = "Informe Opções pra Tarefa.";
 
         if($erros){

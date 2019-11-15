@@ -7,7 +7,7 @@ Use Application\models\Choice;
 if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
     if( isset($_SESSION['WARNING']) && !is_null($_SESSION['WARNING'])){
         $errors = $_SESSION['WARNING'];
-        print 'Corrija estes erros : <ul><li>';
+        print 'Avisos : <ul><li>';
         print implode('</li><li>', $errors);
         print '</li></ul>';
         unset($_SESSION['WARNING']);
@@ -17,7 +17,7 @@ if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
     if( !is_null($choice->getKey()) ){
         print "<form id='formTabela'>";
         wfHyperLinkA("Chave:");
-        wfInput("iptKey", "text", $choice->getKey(), null, false);
+        wfInput("iptKey", "text", $choice->getKey(), null, true);
         print "<br/>";
         wfHyperLinkA("Titulo:");
         wfInput("iptTitle", "text", $choice->getTitle(), null, false);
@@ -25,7 +25,7 @@ if( isset( $_SESSION['TASK_KEY'] ) && !is_null( $_SESSION['TASK_KEY'] ) ){
         wfHyperLinkA("Corpo da Questão:");
         wfInput("iptStatement", "text", $choice->getStatement(), null, false);
         print "<br/>";
-        foreach( $choice as $id=>$op ){
+        foreach( $choice->getOptions() as $id=>$op ){
             wfHyperLinkA("Opção ".($id + 1).":");
             wfInput("iptOp".($id + 1), "text", $op['text'], null, false);
             print "<br/>";

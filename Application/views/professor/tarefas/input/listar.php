@@ -26,8 +26,8 @@ wfInput("iptSearch", "text");
 print "</td><td>";
 wfSelectBox("sbTarefas", $pairsTarefas , "input", 'input');
 print "</td><td>";
-wfButton("btnCriar", "submit", "Criar", null, null, false, "form1", "./criar.php");
-wfButton("btnFiltrar", "submit", "Filtrar",null, null, false, "form1", "./index.php");
+wfButton("btnCriar", "submit", "Criar", null, "submit-btn", false, "form1", "./criar.php");
+wfButton("btnFiltrar", "submit", "Filtrar",null, "submit-btn", false, "form1", "./index.php");
 print "</td></td></tr> </table>";
 print "</form>";
 //== FIM DO MENU

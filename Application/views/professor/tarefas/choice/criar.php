@@ -9,7 +9,7 @@ $pairsTarefas = array( "input"=>"Entrada", "choice"=>"Múltipla Escolha" );
 
 if( isset($_SESSION['WARNING']) && !is_null($_SESSION['WARNING'])){
     $errors = $_SESSION['WARNING'];
-    print 'Corrija estes erros : <ul><li>';
+    print 'Avisos : <ul><li>';
     print implode('</li><li>', $errors);
     print '</li></ul>';
     unset($_SESSION['WARNING']);

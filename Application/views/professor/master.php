@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title>PENSCOMP</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/panel.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./../../../../css/panel.css" /> -->
+
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   -->
 </head>
 <body>
 <!-- PANEL -->
@@ -37,6 +40,8 @@
 
 <!-- Add Firebase products that you want to use -->
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+
+
 
 <script src="../js/panel.js"></script>
 </body>

@@ -36,9 +36,11 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         }
     }
     else{
+        $_SESSION['TASK_TYPE'] = 'input';
         $page_content = __DIR__."/input/listar.php";
     }
 } else{
+    $_SESSION['TASK_TYPE'] = 'input';
     $page_content = __DIR__."/input/listar.php";
 }
 

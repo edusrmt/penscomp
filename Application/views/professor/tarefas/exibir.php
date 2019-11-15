@@ -16,11 +16,20 @@ if( $_SERVER['REQUEST_METHOD'] == 'GET' ){
             }
             include_once __DIR__.'/master.php';
         } else {
+            $erros[] = "Tipo da Tarefa Não foi Escolhido.";
+            $_SESSION['WARNING'] = $erros;
             header("Location: ./index.php");
         }
     }
     else {
-            header("Location: ./index.php");
+        $erros[] = "Nenhuma tarefa para detalhar ou sem tipo escolhido.";
+        $_SESSION['WARNING'] = $erros;
+        header("Location: ./index.php");
         }
-    } else header("Location: ./index.php");
+    }
+else{
+    $erros[] = "Algum erro aconteceu ao solicitar a página.";
+    $_SESSION['WARNING'] = $erros;
+    header("Location: ./index.php");
+}
 
