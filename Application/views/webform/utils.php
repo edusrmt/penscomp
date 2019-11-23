@@ -11,6 +11,7 @@ function wfSelectBox($name, $pairs, $class = null , $default = null){
     print "</select>";
 }
 
+//NÃO ESTÁ SENDO MAIS UTILIZADA
 function wfSubmitButton($name, $value ){
     print "<input type=\"submit\" name=\"".$name."\" value=\"".$value."\"/>";
 }

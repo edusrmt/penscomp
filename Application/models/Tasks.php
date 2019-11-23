@@ -290,6 +290,22 @@ class Tasks
         }
     }
 
+    /*TODO*/
+    public function getInputWhere( string $query ){
+        $docs = $this->refCInput->where('title', '=', $query)->documents();
+        $data = array();
+        foreach ( $docs as $task ){
+            $input = new Input(
+                $task->id(),
+                $task['title'],
+                $task['statement'],
+                $task['rightAnswer']
+            );
+            array_push($data, $input);
+        }
+        return $data;
+    }
+
     /**
      * @var FirestoreClient
      */
