@@ -1,5 +1,5 @@
 <!-- HOME -->
-<aside class="sidebar">
+<aside id="sidebar">
     <!-- SIGN-FORM -->
     <div class="sign-container">
         <div id="signin" class="signin">        
@@ -8,8 +8,7 @@
                     <input type="email" class="input" id="login-email" placeholder="Email" />
                     <input type="password" class="input" id="login-password" name="password" placeholder="Senha" />                    
                 </div>
-                <button id="login-button" onclick="login();" class="submit-btn">Entrar</button>
-
+                <button id="login-button" onclick="login();" class="special-btn">Entrar</button>
         </div>
         <div id="signup" class="signup slide-up">
             <div class="center">
@@ -20,14 +19,14 @@
                     <input type="email" class="input" name="email" placeholder="Email" />
                     <input type="password" class="input" name="password" placeholder="Senha" />                    
                 </div>
-                <input type="submit" class="submit-btn" value="Registrar">
+                <input type="submit" class="special-btn" value="Registrar">
             </form>
         </div>
         </div>      
     </div>	
     <!-- SIGN-FORM -->
 </aside>
-<section class="content">
+<section id="page-content">
     <div class="logo-container">
         <h1 class="logo">
             <a href="./index.php">Pens<span>comp</span></a>            

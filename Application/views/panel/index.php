@@ -1,9 +1,9 @@
 <!-- PANEL -->
-<aside class="sidebar">
+<aside id="sidebar">
     <!-- MENU -->
     <div class="menu-container">
         <h1 class="logo">
-            <a href="./panel.php">Pens<span>comp</span></a>            
+            <a href="/panel">Pens<span>comp</span></a>            
         </h1>
         <nav class="nav">
             <ul>
@@ -16,8 +16,6 @@
     </div>            
     <!-- MENU -->
 </aside>
-<section class="content">
-<div class="subjects-container">
-</div>
+<section id="page-content">
 </section>
 <!-- PANEL -->

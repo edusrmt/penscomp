@@ -6,7 +6,7 @@
 <script type="text/javascript"  src="/assets/js/blockly/gameBlocks.js"></script>
 <script type="text/javascript"  src="/assets/js/blockly/gamebuilder.js"></script>   
 <div class="viewer"> 
-    <header>
+    <header id=viewer-header>
         <a href="/task" class="navigation" href="#">< ATIVIDADES</a>
         <h1 class="logo">
             <a href="/panel">Pens<span>comp</span></a>            
@@ -38,7 +38,7 @@
 
     <script src="/assets/js/viewer.js"></script>
 
-    <div class="task-container">
+    <div id="task-container">
         <div class="task-text">
             <?php echo $task["statement"]; ?>
         </div>
@@ -142,7 +142,7 @@
             </form>
         </div> 
 
-        <button class="submit-btn" onclick="salvar()">Salvar</button>  
+        <button class="special-btn" onclick="salvar()">Salvar</button>  
     </div>  
 </div>
 <?php 

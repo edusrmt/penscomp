@@ -1,5 +1,5 @@
 <!-- PANEL -->
-<aside class="sidebar">
+<aside id="sidebar">
     <!-- MENU -->
     <div class="menu-container">
         <h1 class="logo">
@@ -16,8 +16,7 @@
     </div>            
     <!-- MENU -->
 </aside>
-<section class="content">    
-    <app-test-alert></app-test-alert>
+<section id="page-content">
     <div class="subjects-container">
         <!-- ADAPTATIVE -->
         <div class="adaptative subject-container">

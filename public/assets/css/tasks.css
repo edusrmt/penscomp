@@ -10,18 +10,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.adaptative .header-wrapper {
-    box-shadow: 0 13px 20px -12px #000000A0;
-    background-color: #022248;
-}
 
-.icon {
+.header-wrapper .icon {
     display: inline-block;
     height: 100%;
     margin-right: 10px;
 }
 
-.info {
+.header-wrapper .info {
     display: inline-block;
     vertical-align: top;
     color: #385170;    
@@ -29,28 +25,19 @@
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
-h2 {    
+.header-wrapper h2 {    
     font-family: 'Viga', sans-serif;
     font-weight: 100;
     margin: 5% 0 0 0;
 }
 
-.adaptative h2 {   
-    color: whitesmoke;
-}
-
-p {
-    
+.header-wrapper p {    
     text-decoration: none;
     margin: 2% 0;
     transition: 100ms;
 }
 
-a button {    
+.header-wrapper a button {    
     color: #3c65aa;
     cursor: pointer;
 	border-radius: 40px;
@@ -71,7 +58,7 @@ a button {
     background-size: 300% 100%;
 }
 
-button span {
+.header-wrapper button span {
     align-items: center;
 	background: #fff;
 	border-radius: 40px;
@@ -82,17 +69,21 @@ button span {
 	width: 100%;
 }
 
-button:hover span {
+.header-wrapper button:hover span {
     background: transparent;
     color: #fff;
 }
 
-.adaptative button:hover span {
-    background: transparent;
-    color: #fff;
+.adaptative .header-wrapper {
+    box-shadow: 0 13px 20px -12px #000000A0;
+    background-color: #022248;
 }
 
-button:focus {
+.adaptative h2 {
+    color: whitesmoke;
+}
+
+.header-wrapper button:focus {
     outline: none;
 }
 

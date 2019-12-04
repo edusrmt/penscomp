@@ -1,5 +1,5 @@
 <div class="viewer">
-    <header>
+    <header id="viewer-header">
         <a href="/exam/prev" class="navigation">< VOLTAR</a>
         <h1 class="logo">
             <a href="/panel">Pens<span>comp</span></a>            

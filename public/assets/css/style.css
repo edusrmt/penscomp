@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous|Rokkitt|Viga|Roboto&display=swap');
 
+/* STYLE */
+
 html, body {
     padding: 0;
     margin: 0;
@@ -7,7 +9,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.sidebar {
+#sidebar {
     position: fixed;
     left: 0;
     top: 0;
@@ -16,182 +18,63 @@ html, body {
     box-shadow: 1px 0 3px 1px #777;
 }
 
-.content {
+#page-content {
     position: relative;
     width: 75%;
     float: right;    
     min-height: 100vh;
 }
 
-/* MENU */
+/* SPECIAL BUTTON */
 
-.menu-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #385170;
-    padding: 0 0 0 0;
+a {
+    text-decoration: none;
 }
 
-.menu-container .logo {
+.special-btn {
     text-transform: uppercase;
-    font: 300 3em 'Righteous', cursive;
-    text-align: center;
-    padding: 30% 0 0 0;
-    margin: 0;
-    opacity: 0.9;
-    transition: 100ms;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 45px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
 }
 
-.logo:hover {
-    opacity: 1;
+.special-btn:hover {
+    background-position: 100% 0;    
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.special-btn:focus {
+    outline: none;
+}
+
+/* LOGO */
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .logo a {
-    display: block;    
-    color: #9fd3c7;
-    text-decoration: none;
-    transition: .15s linear color;
-}
-
-.logo a span {
-    color: #70acb1;
-    font-weight: 600;
-    transition: .15s linear color;
-}
-
-.nav {
-    position: relative;
-    margin: 0 15%;
-    text-align: right;
-    top: 40%;
-    transform: translateY(-65%);
-    font-weight: bold;
-    font-family: 'Viga', sans-serif;
-    padding: 0;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nav ul li {
-    position: relative;
-    margin: 10% 0;
-}
-
-.nav ul li a {
-    line-height: 3em;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.4em;
-    color: rgba(255, 255, 255, 0.35);
     display: block;
-    transition: all ease-out 300ms;
-}
-
-.nav ul li.active a {
-    color: white;
-}
-
-.nav ul li:not(.active)::after {
-    opacity: 0.4;
-}
-
-.nav ul li:not(.active):hover a {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.nav ul li::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.2em;
-    background: black;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(to right, #3629a2, #00ceff);
-}
-
-/* CHOICE */
-.options-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.opt-button {
-    height: 40px;
-    box-sizing: border-box;
-    font-weight: bold;
-    background: none;
-    border: 1px solid #3629a2;
-    border-radius: 15px;
-    padding: 0 15px;
-    cursor: pointer;
-}
-
-.opt-button:hover, .selected {
-    background-image: linear-gradient(to right, #25aae1, #3f86ed);
-    border-color: white;
-    background-size: 300% 100%;
-    color: white;
-    transition: 200ms;
-}
-
-.selectedB {
-    background-image: linear-gradient(to right, #25aae1, #3f86ed);
-    border-color: #25aae1;
-    background-size: 300% 100%;
-    color: white;
-    transition: 200ms;
-}
-
-.phaser-injection {
-    height: 240px;
-    width: 400px;
-    border: none;
-}
-
-button.phaser-option {
-    height: 220px;
-    width: 245px;
-    box-sizing: border-box;
-    font-weight: bold;
-    overflow: hidden;
-    padding: 0;
-}
-
-.task-phaser {
-    border-bottom: 1px solid #3629a2;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#blockly {
-    display: inline-block;
-    width: 40vw;
-    height: 600px;
-    border-style: ridge;
-    border-width: 2px;
-    border-color: blue;
-    border-radius: 12px; 
-    overflow: hidden;   
-}    
-
-#phaser {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 20px;
-}
-
-#phaser canvas {
-    width: 40vw;
+    text-decoration: none;
+    transition: .15s linear color;
 }

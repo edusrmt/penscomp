@@ -20,7 +20,9 @@
     <meta charset="utf-8" />
     <title>PENSCOMP</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/sign-form.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/home.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/menu.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/tasks.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/viewer.css" />
 
@@ -36,8 +38,6 @@
     ?>
 </head>
 <body>
-    
-
     <?php
         require '../Application/autoload.php';
 
@@ -45,7 +45,6 @@
         use Application\core\Controller;
 
         $app = new App();
-
     ?>
 
     
