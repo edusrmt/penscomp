@@ -19,12 +19,12 @@
 <head>
     <meta charset="utf-8" />
     <title>PENSCOMP</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/sign-form.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/home.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/menu.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/tasks.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/assets/css/viewer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/sign-form.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/home.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/menu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/tasks.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/viewer.css" />
 
     <?php
         session_start();
@@ -44,7 +44,7 @@
         use Application\core\App;
         use Application\core\Controller;
 
-        $app = new App();
+        $app = new App();        
     ?>
 
     
@@ -54,6 +54,6 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
 
-    <script src="/public/assets/js/home.js"></script>
+    <script src="/penscomp/public/assets/js/home.js"></script>
 </body>
 </html>

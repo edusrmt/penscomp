@@ -7,10 +7,10 @@
         </h1>
         <nav class="nav">
             <ul>
-                <li><a href="/panel">Início</a></li>
+                <li><a href="/penscomp/panel">Início</a></li>
                 <li class="active"><a href="./tasks.php">Atividades</a></li>
-                <li><a href="/panel">Opções</a></li>
-                <li><a href="/">Sair</a></li>
+                <li><a href="/penscomp/panel">Opções</a></li>
+                <li><a href="/penscomp/">Sair</a></li>
             </ul>
         </nav>
     </div>            
@@ -21,11 +21,11 @@
         <!-- ADAPTATIVE -->
         <div class="adaptative subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Estudo adaptativo</h2>
                     <br>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>
@@ -36,11 +36,11 @@
         <!-- ADAPTATIVE -->
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>
@@ -50,11 +50,11 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>
@@ -64,11 +64,11 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>
@@ -78,11 +78,11 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>
@@ -92,11 +92,11 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/public/assets/img/subject-icon.png" />
+                <img class="icon" src="/penscomp/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
-                    <a href="/exam/start"><button><span>Iniciar</span></button></a>
+                    <a href="/penscomp/exam/start"><button><span>Iniciar</span></button></a>
                 </div>
                 <div class="progress-block">
                     <span class="label">60<span class="smaller">%</span></span>

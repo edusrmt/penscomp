@@ -31,7 +31,7 @@ function login () {
         alert(errorMessage);
     });
     
-    window.location.href = '/panel';
+    window.location.href = '/penscomp/panel';
 };
 
 firebase.auth().onAuthStateChanged(function(user) {

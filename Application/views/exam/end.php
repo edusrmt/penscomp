@@ -1,10 +1,10 @@
 <div class="viewer">
     <header id="viewer-header">
-        <a href="/exam/prev" class="navigation">< VOLTAR</a>
+        <a href="/penscomp/exam/prev" class="navigation">< VOLTAR</a>
         <h1 class="logo">
-            <a href="/panel">Pens<span>comp</span></a>            
+            <a href="/penscomp/panel">Pens<span>comp</span></a>            
         </h1>
-        <a class="navigation" href="/exam/finish">ENVIAR EXAME ></a>
+        <a class="navigation" href="/penscomp/exam/finish">ENVIAR EXAME ></a>
     </header>   
 
     <div class="answers-list">

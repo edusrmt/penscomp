@@ -1,42 +1,42 @@
 <?php $task = $data['task']; ?>
-<script type="text/javascript"  src="/public/assets/js/blockly/blockly_compressed.js"></script>
-<script type="text/javascript"  src="/public/assets/js/blockly/blocks_compressed.js"></script>
-<script type="text/javascript"  src="/public/assets/js/blockly/javascript_compressed.js"></script>
-<script type="text/javascript"  src="/public/assets/js/blockly/msg/en.js"></script>
-<script type="text/javascript"  src="/public/assets/js/blockly/gameBlocks.js"></script>
-<script type="text/javascript"  src="/public/assets/js/blockly/gamebuilder.js"></script>   
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/blockly_compressed.js"></script>
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/blocks_compressed.js"></script>
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/javascript_compressed.js"></script>
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/msg/en.js"></script>
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/gameBlocks.js"></script>
+<script type="text/javascript"  src="/penscomp/public/assets/js/blockly/gamebuilder.js"></script>   
 <div class="viewer"> 
     <header id=viewer-header>
-        <a href="/task" class="navigation" href="#">< ATIVIDADES</a>
+        <a href="/penscomp/task" class="navigation" href="#">< ATIVIDADES</a>
         <h1 class="logo">
-            <a href="/panel">Pens<span>comp</span></a>            
+            <a href="/penscomp/panel">Pens<span>comp</span></a>            
         </h1>
-        <a class="navigation" href="/exam/end">FINALIZAR EXAME ></a>
+        <a class="navigation" href="/penscomp/exam/end">FINALIZAR EXAME ></a>
     </header>
 
     <div class="progress-container">
         <ul id="task-list">
-            <a href="/exam/prev"><li class="arrow"><</li></a>
+            <a href="/penscomp/exam/prev"><li class="arrow"><</li></a>
             <?php
                 for ($i = 0; $i <= $_SESSION["examSize"] - 1; $i++) {
                     if ($i != $_SESSION["currentTask"]) {
                         if($_SESSION["answers"][$i] != null)
-                            echo '<a href="/exam/open/'.$i.'"><li class="has-answer">'.($i + 1).'</li></a>';
+                            echo '<a href="/penscomp/exam/open/'.$i.'"><li class="has-answer">'.($i + 1).'</li></a>';
                         else
-                            echo '<a href="/exam/open/'.$i.'"><li>'.($i + 1).'</li></a>';
+                            echo '<a href="/penscomp/exam/open/'.$i.'"><li>'.($i + 1).'</li></a>';
                     } else {
                         if($_SESSION["answers"][$i] != null)
-                            echo '<a href="/exam/open/'.$i.'"><li class="current-task has-answer">'.($i + 1).'</li></a>';
+                            echo '<a href="/penscomp/exam/open/'.$i.'"><li class="current-task has-answer">'.($i + 1).'</li></a>';
                         else
-                            echo '<a href="/exam/open/'.$i.'"><li class="current-task">'.($i + 1).'</li></a>';
+                            echo '<a href="/penscomp/exam/open/'.$i.'"><li class="current-task">'.($i + 1).'</li></a>';
                     }                    
                 }
             ?>
-            <a href="/exam/next"><li class="arrow">></li></a>
+            <a href="/penscomp/exam/next"><li class="arrow">></li></a>
         </ul>
     </div>
 
-    <script src="/public/assets/js/viewer.js"></script>
+    <script src="/penscomp/public/assets/js/viewer.js"></script>
 
     <div id="task-container">
         <div class="task-text">
@@ -51,14 +51,14 @@
             }
         ?>
         <div class="answer-area">
-            <form id="task-answer" action="/exam/answer" method="POST">
+            <form id="task-answer" action="/penscomp/exam/answer" method="POST">
             <?php
                 switch ($task["type"]) {
                     case "input":
                         if($_SESSION["answers"][$_SESSION["currentTask"]] != null)
                             echo '<input id="answer-input" type="text" name="answer" placeholder="Digite sua resposta aqui..." value="'.$_SESSION["answers"][$_SESSION["currentTask"]].'" />';
                         else
-                            echo '<input id="answer-input" type="text" name="answer" placeholder="Digite sua resposta aqui..."/>';
+                            echo '<input id="answer-input" type="text" name="answer" placeholder="Digite sua resposta aqui..."/penscomp/>';
                     break;
 
                     case "choice":
@@ -147,9 +147,9 @@
 </div>
 <?php 
     if($task["type"] == "choiceBlockly"){
-        echo '<script src="/public/assets/js/blockly/choiceBlockly.js"></script>';
+        echo '<script src="/penscomp/public/assets/js/blockly/choiceBlockly.js"></script>';
     }
     else if($task["type"] == "choicePhaserBlockly"){
-        echo '<script src="/public/assets/js/blockly/choiceBlocklyPhaser.js"></script>';
+        echo '<script src="/penscomp/public/assets/js/blockly/choiceBlocklyPhaser.js"></script>';
     }
 ?> 
