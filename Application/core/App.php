@@ -47,14 +47,14 @@ class App
   private function getControllerFromUrl($url)
   {
     if ( !empty($url[0]) && isset($url[0]) ) {
-      if ( file_exists('../Application/controllers/' . ucfirst($url[0])  . '.php') ) {
+      if ( file_exists('./Application/controllers/' . ucfirst($url[0])  . '.php') ) {
         $this->controller = ucfirst($url[0]);
       } else {
         $this->page404 = true;
       }
     }
 
-    require '../Application/controllers/' . $this->controller . '.php';
+    require './Application/controllers/' . $this->controller . '.php';
     $this->controller = new $this->controller();
 
   }

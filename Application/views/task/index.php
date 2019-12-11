@@ -21,7 +21,7 @@
         <!-- ADAPTATIVE -->
         <div class="adaptative subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Estudo adaptativo</h2>
                     <br>
@@ -36,7 +36,7 @@
         <!-- ADAPTATIVE -->
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
@@ -50,7 +50,7 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
@@ -64,7 +64,7 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
@@ -78,7 +78,7 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>
@@ -92,7 +92,7 @@
         </div>
         <div class="subject-container">
             <div class="header-wrapper">
-                <img class="icon" src="/assets/img/subject-icon.png" />
+                <img class="icon" src="/public/assets/img/subject-icon.png" />
                 <div class="info">
                     <h2>Nome do assunto</h2>
                     <p>10 exercícios</p>

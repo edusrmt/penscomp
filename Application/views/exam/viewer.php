@@ -1,10 +1,10 @@
 <?php $task = $data['task']; ?>
-<script type="text/javascript"  src="/assets/js/blockly/blockly_compressed.js"></script>
-<script type="text/javascript"  src="/assets/js/blockly/blocks_compressed.js"></script>
-<script type="text/javascript"  src="/assets/js/blockly/javascript_compressed.js"></script>
-<script type="text/javascript"  src="/assets/js/blockly/msg/en.js"></script>
-<script type="text/javascript"  src="/assets/js/blockly/gameBlocks.js"></script>
-<script type="text/javascript"  src="/assets/js/blockly/gamebuilder.js"></script>   
+<script type="text/javascript"  src="/public/assets/js/blockly/blockly_compressed.js"></script>
+<script type="text/javascript"  src="/public/assets/js/blockly/blocks_compressed.js"></script>
+<script type="text/javascript"  src="/public/assets/js/blockly/javascript_compressed.js"></script>
+<script type="text/javascript"  src="/public/assets/js/blockly/msg/en.js"></script>
+<script type="text/javascript"  src="/public/assets/js/blockly/gameBlocks.js"></script>
+<script type="text/javascript"  src="/public/assets/js/blockly/gamebuilder.js"></script>   
 <div class="viewer"> 
     <header id=viewer-header>
         <a href="/task" class="navigation" href="#">< ATIVIDADES</a>
@@ -36,7 +36,7 @@
         </ul>
     </div>
 
-    <script src="/assets/js/viewer.js"></script>
+    <script src="/public/assets/js/viewer.js"></script>
 
     <div id="task-container">
         <div class="task-text">
@@ -147,9 +147,9 @@
 </div>
 <?php 
     if($task["type"] == "choiceBlockly"){
-        echo '<script src="/assets/js/blockly/choiceBlockly.js"></script>';
+        echo '<script src="/public/assets/js/blockly/choiceBlockly.js"></script>';
     }
     else if($task["type"] == "choicePhaserBlockly"){
-        echo '<script src="/assets/js/blockly/choiceBlocklyPhaser.js"></script>';
+        echo '<script src="/public/assets/js/blockly/choiceBlocklyPhaser.js"></script>';
     }
 ?> 

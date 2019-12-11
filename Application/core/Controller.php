@@ -18,7 +18,7 @@ class Controller
   */
   public function model($model)
   {
-    require '../Application/models/' . $model . '.php';
+    require './Application/models/' . $model . '.php';
     $classe = 'Application\\models\\' . $model;
     return new $classe();
 
@@ -32,7 +32,7 @@ class Controller
   */
   public function view(string $view, $data = [])
   {
-    require '../Application/views/' . $view . '.php';
+    require './Application/views/' . $view . '.php';
 
   }
 
