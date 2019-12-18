@@ -44,4 +44,4 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     $page_content = __DIR__."/input/listar.php";
 }
 
-include_once __DIR__."/../master.php";
+//include_once __DIR__."/../master.php";

@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/menu.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/tasks.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/viewer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/penscomp/public/assets/css/professor.css" />
 
     <?php
         session_start();

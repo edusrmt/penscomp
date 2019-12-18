@@ -1,0 +1,148 @@
+.crud-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.crud-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+}
+
+.crud-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crud-index button {
+    min-width: 60px;
+}
+
+.crud-index * + * {
+    margin-left: 10px;
+}
+
+.crud-content select {
+    border-radius: 5px;
+    width: 65%;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #4481eb;
+}
+
+.crud-button {
+    border-radius: 5px;
+    background-color: #83a9e9;
+    border: none;
+    height: 25px;
+    color: white;
+}
+
+.crud-button:hover {
+    background-color: #4481eb;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.crud-create select {
+    width: 70%;
+}
+
+.crud-create .crud-button {
+    width: 25%;
+    margin-left: 4%;
+}
+
+.crud-create h1 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #4481eb;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.crud-content label {    
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.crud-content input[type="text"] {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #4481eb;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.opt-create {
+    padding-top: 10px;
+}
+
+.opt-create label {
+    display: inline;
+}
+
+.opt-create input[type="text"] {
+    width: 84%;
+    margin-left: 2%;
+    margin-bottom: 10px;
+}
+
+.opt-create input[type="number"] {
+    width: 61%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #4481eb;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-left: 2%;
+}
+
+.crud-content .special-btn {
+    margin-bottom: 0;
+}
+
+.crud-list {
+    margin-top: 20px;
+}
+
+.crud-list td:nth-child(4){
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.crud-list td:nth-child(3){
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+table {
+    border-collapse: collapse;
+    
+}
+
+table, th, td {
+    border: 1px solid #4481eb;
+}
+
+th, td {
+    border-radius: 5px;
+    padding: 5px;
+}
+
